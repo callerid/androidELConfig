@@ -6,8 +6,10 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
@@ -15,13 +17,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.format.Formatter;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -33,10 +40,14 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private String inString = "Waiting...";
     private UDPListen mService;
+    private String suggestedIP;
     private boolean mBound;
 
     // Scroller list
     private String[] lineCountEntries;
+
+    private TableLayout tableCallLog;
+    private ScrollView svCallLog;
 
     // Buttons
     private Button btnC;
@@ -49,8 +60,90 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private Button btnK;
     private Button btnGetToggles;
 
+    // Labels
+    private TextView lbSuggestedIP;
+
     // UDP variables
     int boxPort = 3520;
+
+    private void addCallToLog(int myLine,String myType,String myIndicator,String myDuration,String myCheckSum,String myRings,String myDateTime,String myNumber,String myName){
+
+        // Print call to call log
+        TableRow newRow = new TableRow(this);
+        newRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
+
+        TextView tv = new TextView(this);
+
+        // Line
+        String line = "" + myLine;
+        if(line.length()==1){
+            line = "0" + line;
+        }
+        tv.setText(line);
+        tv.setPadding(0,0,25,0);
+        newRow.addView(tv);
+
+        // I/O
+        tv = new TextView(this);
+        tv.setText("" + myType);
+        tv.setPadding(0,0,60,0);
+        newRow.addView(tv);
+
+        // Start/End
+        tv = new TextView(this);
+        tv.setText("" + myIndicator);
+        tv.setPadding(0,0,70,0);
+        newRow.addView(tv);
+
+        // Duration
+        tv = new TextView(this);
+        tv.setText("" + myDuration);
+        tv.setPadding(0,0,25,0);
+        newRow.addView(tv);
+
+        // Checksum
+        tv = new TextView(this);
+        tv.setText("" + myCheckSum);
+        tv.setPadding(0,0,40,0);
+        newRow.addView(tv);
+
+        // Ring
+        tv = new TextView(this);
+        tv.setText("" + myRings);
+        tv.setPadding(0,0,70,0);
+        newRow.addView(tv);
+
+        // Date & Time
+        tv = new TextView(this);
+        tv.setText("" + myDateTime);
+        tv.setPadding(0,0,50,0);
+        newRow.addView(tv);
+
+        // Number
+        tv = new TextView(this);
+        tv.setText("" + myNumber);
+        tv.setPadding(0,0,60,0);
+        newRow.addView(tv);
+
+        // Name
+        tv = new TextView(this);
+        tv.setText("" + myName);
+        tv.setPadding(0,0,60,0);
+        newRow.addView(tv);
+
+        // Add row to call log table
+        tableCallLog.addView(newRow);
+
+        // Auto-scroll to bottom
+        svCallLog.post(new Runnable() {
+
+            @Override
+            public void run() {
+                svCallLog.fullScroll(ScrollView.FOCUS_DOWN);
+            }
+        });
+
+    }
 
     public void gotUDP(String inString){
 
@@ -93,6 +186,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 myName = matcher.group(10);
 
             }
+
+            // Add call to log
+            addCallToLog(myLine,myType,myIndicator,myDuration,myCheckSum,myRings,myDateTime,myNumber,myName);
 
         }
 
@@ -166,7 +262,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
             // Set all toggles
             btnC.setText(c);
-            if(c=="C"){
+            if(c.equals("C")){
                 btnC.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnC.setTextColor(toggleIsNotSetTextColor);
             }
@@ -176,7 +272,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnU.setText(u);
-            if(u=="U"){
+            if(u.equals("U")){
                 btnU.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnU.setTextColor(toggleIsNotSetTextColor);
             }
@@ -186,7 +282,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnD.setText(d);
-            if(d=="D"){
+            if(d.equals("D")){
                 btnD.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnD.setTextColor(toggleIsNotSetTextColor);
             }
@@ -196,7 +292,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnA.setText(a);
-            if(a=="A"){
+            if(a.equals("A")){
                 btnA.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnA.setTextColor(toggleIsNotSetTextColor);
             }
@@ -206,7 +302,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnS.setText(s);
-            if(s=="S"){
+            if(s.equals("S")){
                 btnS.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnS.setTextColor(toggleIsNotSetTextColor);
             }
@@ -216,7 +312,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnO.setText(o);
-            if(o=="O"){
+            if(o.equals("O")){
                 btnO.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnO.setTextColor(toggleIsNotSetTextColor);
             }
@@ -226,7 +322,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnB.setText(b);
-            if(b=="B"){
+            if(b.equals("B")){
                 btnB.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnB.setTextColor(toggleIsNotSetTextColor);
             }
@@ -236,7 +332,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             btnK.setText(k);
-            if(k=="K"){
+            if(k.equals("K")){
                 btnK.setBackgroundColor(toggleIsNotSetBkgColor);
                 btnK.setTextColor(toggleIsNotSetTextColor);
             }
@@ -258,7 +354,11 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         String preCmd = btn.getText().toString();
         String command = "^^Id-" + flipCase(preCmd);
 
+        // Send command to change toggles
         sendUDP(command,boxPort);
+
+        // Get toggles to dispaly
+        getToggles();
 
     }
 
@@ -323,11 +423,20 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         // Set screen to stay on
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        // Force Landscape
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
         // Populate sprLineCount
         lineCountEntries = new String[]{"1","5","9","17","21","25","33"};
         Spinner sprLineCount = (Spinner)findViewById(R.id.sprLineCount);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,lineCountEntries);
         sprLineCount.setAdapter(adapter);
+
+        // Scrollview References
+        svCallLog = (ScrollView)findViewById(R.id.svCallLog);
+
+        // Table References
+        tableCallLog = (TableLayout)findViewById(R.id.tableCallLog);
 
         // Buttons
         btnGetToggles = (Button)findViewById(R.id.btnGetToggles);
@@ -400,6 +509,11 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         });
 
+        getToggles();
+
+        // Label references
+        lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
+
     }
 
     @Override
@@ -413,8 +527,13 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     protected void onStart(){
         super.onStart();
 
+        lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
+
         ActivityCompat.requestPermissions(MainActivity.this,
-                new String[]{Manifest.permission.INTERNET},
+                new String[]{
+                        Manifest.permission.INTERNET,
+                        Manifest.permission.ACCESS_NETWORK_STATE,
+                        Manifest.permission.ACCESS_WIFI_STATE},
                 1);
 
 
@@ -430,10 +549,15 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
+                    WifiManager wm = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
+                    String ip = Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress());
+                    suggestedIP = ip.substring(0,ip.lastIndexOf(".")) + ".90";
+
+                    lbSuggestedIP.setText("Suggested IP: " + suggestedIP);
+
                     // bind to Service
                     Intent intent = new Intent(this, UDPListen.class);
                     mBound = bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
-                    boolean stop = false;
 
                 } else {
 
@@ -443,7 +567,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 return;
             }
 
-            // other 'case' lines to check for other
+            // other "case" lines to check for other
             // permissions this app might request
         }
     }
