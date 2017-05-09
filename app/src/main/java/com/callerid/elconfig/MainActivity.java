@@ -18,12 +18,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.Formatter;
+import android.util.Xml;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TableLayout;
@@ -41,6 +43,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private String inString = "Waiting...";
     private UDPListen mService;
     private String suggestedIP;
+    private String deviceIP;
     private boolean mBound;
 
     // Scroller list
@@ -58,13 +61,31 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private Button btnO;
     private Button btnB;
     private Button btnK;
+
     private Button btnGetToggles;
+    private Button btnClearCallLog;
+
+    private Button btnT1;
+    private Button btnT2;
+    private Button btnT3;
 
     // Labels
     private TextView lbSuggestedIP;
 
+    // Textfields
+    private EditText tbCode;
+    private EditText tbUnitIP;
+
     // UDP variables
     int boxPort = 3520;
+    int connectToTech = 0;
+
+    private void clearCallLog(){
+
+        // Add row to call log table
+        tableCallLog.removeAllViews();
+
+    }
 
     private void addCallToLog(int myLine,String myType,String myIndicator,String myDuration,String myCheckSum,String myRings,String myDateTime,String myNumber,String myName){
 
@@ -171,6 +192,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         if(matcher.find()){
 
+            // Try to send to CallerID.com tech support
+            techRepeat(myData);
+
             myLine = Integer.parseInt(matcher.group(1));
             myType = matcher.group(2);
 
@@ -197,6 +221,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         Matcher matcherDetailed = myPatternDetailed.matcher(myData);
 
         if(matcherDetailed.find()){
+
+            // Try to send to CallerID.com tech support
+            techRepeat(myData);
 
             myLine = Integer.parseInt(matcherDetailed.group(1));
             myType = matcherDetailed.group(2);
@@ -227,6 +254,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         Matcher matcherComm = myCommPattern.matcher(myData);
 
         if(matcherComm.find()){
+
+            // Try to send to CallerID.com tech support
+            techRepeat(myData);
 
             recData = matcherComm.group(0);
             e = matcherComm.group(1);
@@ -343,9 +373,111 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         }
 
-        // ------------- OUTPUT data on UI ------------------
+        // Other data
+        byte[] data = myData.getBytes();
+        if(data.length>89){
 
+            // if data contains "^^", ignore packet
+            if(!(data[0]==94 && data[1]==94)){
+                return;
+            }
 
+            /*
+             <1>units dectected</1>
+             <2>serial number</2>
+             <3>Unit number</3>
+             <4>unit ip</4>
+             <5>unit mac</5>
+             <6>unit port</6>
+             <7>dest ip</7>
+             <8>dest mac</8>
+             <9>this ip</9>
+            */
+
+            // Only one unit at a time
+            int unitsDetected = 1;
+
+            // Serial Number
+            String serial_number = "<android device>";
+
+            // Unit Number
+            String unit_num_1 = "" + (char)data[57];
+            String unit_num_2 = "" + (char)data[58];
+            String unit_num_3 = "" + (char)data[59];
+            String unit_num_4 = "" + (char)data[60];
+            String unit_num_5 = "" + (char)data[61];
+            String unit_num_6 = "" + (char)data[62];
+
+            String unit_number = unit_num_1 + unit_num_2 + unit_num_3 + unit_num_4 + unit_num_5 + unit_num_6;
+
+            // Get UNIT IP address
+            String unit_ip_1 = "" + (char)data[33];
+            String unit_ip_2 = "" + (char)data[34];
+            String unit_ip_3 = "" + (char)data[35];
+            String unit_ip_4 = "" + (char)data[36];
+
+            String unit_ip = unit_ip_1 + "." + unit_ip_2 + "." + unit_ip_3 + "." + unit_ip_4;
+            tbUnitIP.setText(unit_ip);
+
+            // Get UNIT MAC address
+            byte[] m1 = new byte[]{data[24]};
+            String unit_mac_1 = bytesToHex(m1);
+
+            byte[] m2 = new byte[]{data[25]};
+            String unit_mac_2 = bytesToHex(m2);
+
+            byte[] m3 = new byte[]{data[26]};
+            String unit_mac_3 = bytesToHex(m3);
+
+            byte[] m4 = new byte[]{data[27]};
+            String unit_mac_4 = bytesToHex(m4);
+
+            byte[] m5 = new byte[]{data[28]};
+            String unit_mac_5 = bytesToHex(m5);
+
+            byte[] m6 = new byte[]{data[29]};
+            String unit_mac_6 = bytesToHex(m6);
+
+            String unit_mac_address = unit_mac_1 + "-" + unit_mac_2 + "-" + unit_mac_3 + "-" + unit_mac_4 + "-" + unit_mac_5 + "-" + unit_mac_6;
+
+            // Unit PORT
+            String portHex = bytesToHex(new byte[]{data[52],data[53]});
+            long port = Long.parseLong(portHex, 16);
+
+            String dest_port = "" + port;
+
+            // Get Dest IP address
+            String dest_ip_1 = "" + (char)data[40];
+            String dest_ip_2 = "" + (char)data[41];
+            String dest_ip_3 = "" + (char)data[42];
+            String dest_ip_4 = "" + (char)data[43];
+
+            String dest_ip = dest_ip_1 + "." + dest_ip_2 + "." + dest_ip_3 + "." + dest_ip_4;
+
+            // Get UNIT MAC address
+            m1 = new byte[]{data[66]};
+            String dest_mac_1 = bytesToHex(m1);
+
+            m2 = new byte[]{data[67]};
+            String dest_mac_2 = bytesToHex(m2);
+
+            m3 = new byte[]{data[68]};
+            String dest_mac_3 = bytesToHex(m3);
+
+            m4 = new byte[]{data[69]};
+            String dest_mac_4 = bytesToHex(m4);
+
+            m5 = new byte[]{data[70]};
+            String dest_mac_5 = bytesToHex(m5);
+
+            m6 = new byte[]{data[71]};
+            String dest_mac_6 = bytesToHex(m6);
+
+            String dest_mac_address = dest_mac_1 + "-" + dest_mac_2 + "-" + dest_mac_3 + "-" + dest_mac_4 + "-" + dest_mac_5 + "-" + dest_mac_6;
+
+            techUpdate(unitsDetected, serial_number, unit_number, unit_ip, unit_mac_address, dest_port, dest_ip, dest_mac_address);
+
+        }
 
     }
 
@@ -355,7 +487,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         String command = "^^Id-" + flipCase(preCmd);
 
         // Send command to change toggles
-        sendUDP(command,boxPort);
+        sendUDP(command,boxPort,"255.255.255.255");
 
         // Get toggles to dispaly
         getToggles();
@@ -364,7 +496,13 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private void getToggles(){
 
-        sendUDP("^^Id-V",boxPort);
+        sendUDP("^^Id-V",boxPort,"255.255.255.255");
+
+    }
+
+    private void updateParameters(){
+
+        sendUDP("^^IdX",boxPort,"255.255.255.255");
 
     }
 
@@ -382,10 +520,11 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
-    private void sendUDP(String toSend, int port){
+    private void sendUDP(String toSend, int port, String ipAddress){
 
         final int sendPort = port;
         final String toSendMessage = toSend;
+        final String sendToIPAddress = ipAddress;
 
         new Thread() {
             @Override
@@ -400,7 +539,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
                     // Prepare
                     DatagramSocket s = new DatagramSocket();
-                    InetAddress local = InetAddress.getByName("255.255.255.255");
+                    InetAddress local = InetAddress.getByName(sendToIPAddress);
                     DatagramPacket p = new DatagramPacket(message, msg_length,local,server_port);
 
                     // Send
@@ -439,6 +578,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         tableCallLog = (TableLayout)findViewById(R.id.tableCallLog);
 
         // Buttons
+        btnClearCallLog = (Button)findViewById(R.id.btnClearLog);
         btnGetToggles = (Button)findViewById(R.id.btnGetToggles);
 
         // Button clicks
@@ -446,6 +586,12 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             @Override
             public void onClick(View v) {
                 getToggles();
+            }
+        });
+        btnClearCallLog.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearCallLog();
             }
         });
 
@@ -509,10 +655,166 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         });
 
-        getToggles();
+        // Tech repeats
+        btnT1 = (Button)findViewById(R.id.btnT1);
+        btnT2 = (Button)findViewById(R.id.btnT2);
+        btnT3 = (Button)findViewById(R.id.btnT3);
+        tbCode = (EditText)findViewById(R.id.tbCode);
+
+        // Tech repeats listener
+        btnT1.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectingTech(btnT1);
+            }
+        });
+        btnT2.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectingTech(btnT2);
+            }
+        });
+        btnT3.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectingTech(btnT3);
+            }
+        });
 
         // Label references
         lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
+
+        // Edit text references
+        tbUnitIP = (EditText)findViewById(R.id.tbIPAddress);
+
+        //--------------------------------------------------------
+        // Start tech support loop
+        new Thread() {
+            @Override
+            public void run() {
+                while(true){
+                    try{
+                        Thread.sleep(1500);
+                        updateParameters();
+                        Thread.sleep(500);
+                        getToggles();
+                    }catch (Exception e){
+                        System.out.print("Could not sleep for tech support.");
+                        break;
+                    }
+                }
+            }
+        }.start();
+        //--------------------------------------------------------
+
+    }
+
+    private void selectingTech(Button btn){
+
+        if(btn==btnT1) connectToTech = 1;
+        if(btn==btnT2) connectToTech = 2;
+        if(btn==btnT3) connectToTech = 3;
+
+        tbCode.setVisibility(View.VISIBLE);
+
+        switch (connectToTech){
+
+            case 1:
+                btnT1.setBackgroundColor(Color.GREEN);
+                btnT2.setBackgroundColor(Color.LTGRAY);
+                btnT3.setBackgroundColor(Color.LTGRAY);
+                break;
+
+            case 2:
+                btnT2.setBackgroundColor(Color.GREEN);
+                btnT3.setBackgroundColor(Color.LTGRAY);
+                btnT1.setBackgroundColor(Color.LTGRAY);
+                break;
+
+            case 3:
+                btnT3.setBackgroundColor(Color.GREEN);
+                btnT1.setBackgroundColor(Color.LTGRAY);
+                btnT2.setBackgroundColor(Color.LTGRAY);
+                break;
+
+            default:
+                btnT1.setBackgroundColor(Color.LTGRAY);
+                btnT2.setBackgroundColor(Color.LTGRAY);
+                btnT3.setBackgroundColor(Color.LTGRAY);
+                tbCode.setVisibility(View.INVISIBLE);
+                break;
+
+        }
+
+    }
+
+    private void techRepeat(String repeatThis){
+
+        if(connectToTech == 0) return;
+
+        String sendString = "<" + tbCode.getText() + ">" + repeatThis;
+
+        String techPort = "3520";
+        switch (connectToTech){
+
+            case 1:
+                techPort = "3531";
+                break;
+
+            case 2:
+                techPort = "3532";
+                break;
+
+            case 3:
+                techPort = "3534";
+                break;
+
+            default:
+                break;
+        }
+
+        sendUDP(sendString,Integer.parseInt(techPort),"72.16.182.60");
+
+    }
+
+    private void techUpdate(int units,String serial,String unitNumber,String unitIP,String unitMAC,String unitPort,String destIP,String destMAC){
+
+        if(connectToTech == 0) return;
+
+        String thisIP = deviceIP;
+
+        String dataString ="<1>" + units + "</1>" +
+                "<2>" + serial + "</2>" +
+                "<3>" + unitNumber + "</3>" +
+                "<4>" + unitIP + "</4>" +
+                "<5>" + unitMAC + "</5>" +
+                "<6>" + unitPort + "</6>" +
+                "<7>" + destIP + "</7>" +
+                "<8>" + destMAC + "</8>" +
+                "<9>" + thisIP + "</9>";
+
+        String sendString = "<" + tbCode.getText() + ">" + dataString;
+
+        String techPort = "3520";
+        switch (connectToTech){
+
+            case 1:
+                techPort = "3531";
+                break;
+
+            case 2:
+                techPort = "3532";
+                break;
+
+            case 3:
+                techPort = "3534";
+                break;
+
+            default:
+                break;
+        }
+
+        sendUDP(sendString,Integer.parseInt(techPort),"72.16.182.60");
 
     }
 
@@ -551,7 +853,17 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
                     WifiManager wm = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
                     String ip = Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress());
-                    suggestedIP = ip.substring(0,ip.lastIndexOf(".")) + ".90";
+                    deviceIP = ip;
+
+                    int indexOfLastPeriod = ip.lastIndexOf(".") + 1;
+                    String ipStub = ip.substring(indexOfLastPeriod);
+                    int endingIP = Integer.parseInt(ipStub);
+
+                    String newEnding = "90";
+                    if(endingIP<50 || endingIP>150) newEnding = "90";
+                    if(endingIP>50 && endingIP<150) newEnding = "190";
+
+                    suggestedIP = ip.substring(0,ip.lastIndexOf(".")) + "." + newEnding;
 
                     lbSuggestedIP.setText("Suggested IP: " + suggestedIP);
 
@@ -621,6 +933,17 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         });
 
+    }
+
+    private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+    public static String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for ( int j = 0; j < bytes.length; j++ ) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4];
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+        }
+        return new String(hexChars);
     }
 
 }
