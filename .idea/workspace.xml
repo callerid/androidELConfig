@@ -17,9 +17,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44554377-5fb8-4d90-9293-a8bb64958958" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
     </list>
     <ignored path="ELConfig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,17 +55,18 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="845" column="85" selection-start-line="845" selection-start-column="85" selection-end-line="845" selection-end-column="85" />
+            <state relative-caret-position="106">
+              <caret line="377" column="27" selection-start-line="377" selection-start-column="27" selection-end-line="377" selection-end-column="27" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#16024#16814#0" expanded="true" />
+                <element signature="e#16813#16814#0" expanded="true" />
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -73,7 +75,7 @@
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#27899:28376" expanded="false" />
+                <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
                 <element signature="method#display#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
               </folding>
@@ -1940,9 +1942,9 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
       </list>
     </option>
@@ -1987,6 +1989,48 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="elconfig" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2342,7 +2386,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14608802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14608802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2372,7 +2416,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2384,12 +2428,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2398,7 +2443,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2423,12 +2468,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2437,7 +2483,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2451,12 +2497,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2465,7 +2512,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2497,12 +2544,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2511,7 +2559,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2536,12 +2584,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2550,7 +2599,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2575,12 +2624,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2589,7 +2639,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2603,12 +2653,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2617,7 +2668,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2631,12 +2682,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2645,7 +2697,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2669,12 +2721,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2683,7 +2736,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2707,12 +2760,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2721,7 +2775,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2745,12 +2799,13 @@
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2759,7 +2814,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2790,6 +2845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2807,13 +2863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -2823,6 +2872,22 @@
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="4087" column="0" selection-start-line="4087" selection-start-column="0" selection-end-line="4087" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
@@ -2836,26 +2901,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="4087" column="0" selection-start-line="4087" selection-start-column="0" selection-end-line="4087" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="845" column="85" selection-start-line="845" selection-start-column="85" selection-end-line="845" selection-end-column="85" />
+        <state relative-caret-position="106">
+          <caret line="377" column="27" selection-start-line="377" selection-start-column="27" selection-end-line="377" selection-end-column="27" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#16024#16814#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2864,7 +2923,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#27899:28376" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#27902:28379" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
           </folding>

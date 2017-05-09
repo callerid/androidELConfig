@@ -378,9 +378,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         if(data.length>89){
 
             // if data contains "^^", ignore packet
-            if(!(data[0]==94 && data[1]==94)){
+            /*if(!(data[0]==94 && data[1]==94)){
                 return;
-            }
+            }*/
 
             /*
              <1>units dectected</1>
@@ -502,7 +502,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private void updateParameters(){
 
-        sendUDP("^^IdX",boxPort,"255.255.255.255");
+        sendUDP("^^IdX",3520,"255.255.255.255");
 
     }
 
@@ -697,7 +697,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                         Thread.sleep(1500);
                         updateParameters();
                         Thread.sleep(500);
-                        getToggles();
+                        //getToggles();
                     }catch (Exception e){
                         System.out.print("Could not sleep for tech support.");
                         break;
