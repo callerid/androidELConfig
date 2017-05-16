@@ -61,22 +61,28 @@ public class UDPListen extends Service {
             try{
 
                 socket = new DatagramSocket(null);
-                SocketAddress address = new InetSocketAddress("255.255.255.255",3520);
+                SocketAddress address = new InetSocketAddress("0.0.0.0",3520);
                 socket.setReuseAddress(true);
                 socket.setBroadcast(true);
                 socket.bind(address);
 
                 byte[] buffer = new byte[65507];
                 Boolean looping = true;
+                byte[] rtnArray = null;
                 while (looping) {
                     DatagramPacket dp = new DatagramPacket(buffer, buffer.length);
                     try {
 
                         socket.receive(dp);
                         recString = new String(dp.getData(), 0, dp.getLength());
+                        rtnArray = new byte[dp.getLength()];
+                        System.arraycopy(dp.getData(), 0, rtnArray, 0, dp.getLength());
 
                         // Send UDP packet information to MainActivity through interface
-                        serviceCallbacks.display(recString);
+                        // Also filter out small packets
+                        if(recString.length()>10){
+                            serviceCallbacks.display(recString,rtnArray);
+                        }
 
                     } catch (Exception ex) {
                         System.out.println("Exception: " + ex.toString());

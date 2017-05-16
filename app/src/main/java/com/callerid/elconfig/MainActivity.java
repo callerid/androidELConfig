@@ -18,6 +18,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.Formatter;
+import android.util.Log;
 import android.util.Xml;
 import android.view.View;
 import android.view.Menu;
@@ -166,7 +167,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
-    public void gotUDP(String inString){
+    public void gotUDP(String inString, byte[] arrayData){
 
         // Reception of UDP string
         // Handle all data
@@ -374,7 +375,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         }
 
         // Other data
-        byte[] data = myData.getBytes();
+        byte[] data = arrayData;
         if(data.length>89){
 
             // if data contains "^^", ignore packet
@@ -401,20 +402,20 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String serial_number = "<android device>";
 
             // Unit Number
-            String unit_num_1 = "" + (char)data[57];
-            String unit_num_2 = "" + (char)data[58];
-            String unit_num_3 = "" + (char)data[59];
-            String unit_num_4 = "" + (char)data[60];
-            String unit_num_5 = "" + (char)data[61];
-            String unit_num_6 = "" + (char)data[62];
+            String unit_num_1 = "" + data[4];
+            String unit_num_2 = "" + data[5];
+            String unit_num_3 = "" + data[6];
+            String unit_num_4 = "" + data[7];
+            String unit_num_5 = "" + data[8];
+            String unit_num_6 = "" + data[9];
 
             String unit_number = unit_num_1 + unit_num_2 + unit_num_3 + unit_num_4 + unit_num_5 + unit_num_6;
 
             // Get UNIT IP address
-            String unit_ip_1 = "" + (char)data[33];
-            String unit_ip_2 = "" + (char)data[34];
-            String unit_ip_3 = "" + (char)data[35];
-            String unit_ip_4 = "" + (char)data[36];
+            String unit_ip_1 = "" + hexToLongInt(bytesToHex(new byte[]{data[33]}));
+            String unit_ip_2 = "" + hexToLongInt(bytesToHex(new byte[]{data[34]}));
+            String unit_ip_3 = "" + hexToLongInt(bytesToHex(new byte[]{data[35]}));
+            String unit_ip_4 = "" + hexToLongInt(bytesToHex(new byte[]{data[36]}));
 
             String unit_ip = unit_ip_1 + "." + unit_ip_2 + "." + unit_ip_3 + "." + unit_ip_4;
             tbUnitIP.setText(unit_ip);
@@ -447,10 +448,10 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String dest_port = "" + port;
 
             // Get Dest IP address
-            String dest_ip_1 = "" + (char)data[40];
-            String dest_ip_2 = "" + (char)data[41];
-            String dest_ip_3 = "" + (char)data[42];
-            String dest_ip_4 = "" + (char)data[43];
+            String dest_ip_1 = "" + hexToLongInt(bytesToHex(new byte[]{data[40]}));
+            String dest_ip_2 = "" + hexToLongInt(bytesToHex(new byte[]{data[41]}));
+            String dest_ip_3 = "" + hexToLongInt(bytesToHex(new byte[]{data[42]}));
+            String dest_ip_4 = "" + hexToLongInt(bytesToHex(new byte[]{data[43]}));
 
             String dest_ip = dest_ip_1 + "." + dest_ip_2 + "." + dest_ip_3 + "." + dest_ip_4;
 
@@ -496,13 +497,15 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private void getToggles(){
 
-        sendUDP("^^Id-V",boxPort,"255.255.255.255");
+        //sendUDP("^^Id-V",boxPort,"255.255.255.255");
+
+        sendUDP("^^IdX",3520,"255.255.255.255");
 
     }
 
     private void updateParameters(){
 
-        sendUDP("^^IdX",3520,"255.255.255.255");
+        //sendUDP("^^IdX",3520,"255.255.255.255");
 
     }
 
@@ -921,15 +924,14 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     // Link Display to Update so the UI gets updated through interface
     @Override
-    public void display(String rString){
+    public void display(String rString, final byte[] rArray){
 
         inString = rString;
-
         runOnUiThread(new Runnable() {
 
             @Override
             public void run() {
-                gotUDP(inString);
+                gotUDP(inString,rArray);
             }
         });
 
@@ -944,6 +946,11 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             hexChars[j * 2 + 1] = hexArray[v & 0x0F];
         }
         return new String(hexChars);
+    }
+    public static Long hexToLongInt(String hexStr) {
+
+        return Long.parseLong(hexStr, 16);
+
     }
 
 }
