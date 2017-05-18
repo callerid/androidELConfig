@@ -47,6 +47,14 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private String deviceIP;
     private boolean mBound;
 
+    // Advanced variables
+    private static String UNIT_NUMBER;
+    private static String UNIT_IP;
+    private static String UNIT_MAC;
+    private static String DEST_IP;
+    private static String DEST_PORT;
+    private static String DEST_MAC;
+
     // Scroller list
     private String[] lineCountEntries;
 
@@ -65,6 +73,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private Button btnGetToggles;
     private Button btnClearCallLog;
+    private Button btnAdvanced;
 
     private Button btnT1;
     private Button btnT2;
@@ -167,6 +176,36 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
+    private void addCallToLog(int myLine,String myType, String myDateTime){
+
+        // Print call to call log
+        TableRow newRow = new TableRow(this);
+        newRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
+
+        TextView tv = new TextView(this);
+
+        // Line
+        String line = "" + myLine;
+        if(line.length()==1){
+            line = "0" + line;
+        }
+        tv.setText(line + "    " + myType + "    " + myDateTime);
+        newRow.addView(tv);
+
+        // Add row to call log table
+        tableCallLog.addView(newRow);
+
+        // Auto-scroll to bottom
+        svCallLog.post(new Runnable() {
+
+            @Override
+            public void run() {
+                svCallLog.fullScroll(ScrollView.FOCUS_DOWN);
+            }
+        });
+
+    }
+
     public void gotUDP(String inString, byte[] arrayData){
 
         // Reception of UDP string
@@ -176,8 +215,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         String myData = inString;
 
         String command;
-        Integer myLine=0;
-        String myType="";
+        Integer myLine;
+        String myType;
         String myIndicator="";
 
         String myDuration="";
@@ -233,23 +272,19 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 myDateTime = matcherDetailed.group(3);
             }
 
+            addCallToLog(myLine,myType,myDateTime);
+
         }
 
         // Check if comm data
-        String recData = "n/a";
-        String e = "n/a";
-        String c = "n/a";
-        String x = "n/a";
-        String u = "n/a";
-        String d = "n/a";
-        String a = "n/a";
-        String s = "n/a";
-        String o = "n/a";
-        String b = "n/a";
-        String k = "n/a";
-        String t = "n/a";
-        String line = "n/a";
-        String date = "n/a";
+        String c;
+        String u;
+        String d;
+        String a;
+        String s;
+        String o;
+        String b;
+        String k;
 
         Pattern myCommPattern = Pattern.compile("([Ee])([Cc])([Xx])([Uu])([Dd])([Aa])([Ss])([Oo])([Bb])([Kk])([Tt]) L=(\\d{1,2}) (\\d{1,2}/\\d{1,2} (\\d{1,2}:\\d{1,2}:\\d{1,2}))");
         Matcher matcherComm = myCommPattern.matcher(myData);
@@ -259,10 +294,10 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             // Try to send to CallerID.com tech support
             techRepeat(myData);
 
-            recData = matcherComm.group(0);
-            e = matcherComm.group(1);
+            //recData = matcherComm.group(0);
+            //e = matcherComm.group(1);
             c = matcherComm.group(2);
-            x = matcherComm.group(3);
+            //x = matcherComm.group(3);
             u = matcherComm.group(4);
             d = matcherComm.group(5);
             a = matcherComm.group(6);
@@ -270,9 +305,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             o = matcherComm.group(8);
             b = matcherComm.group(9);
             k = matcherComm.group(10);
-            t = matcherComm.group(11);
-            line = matcherComm.group(12);
-            date = matcherComm.group(13);
+            //t = matcherComm.group(11);
+            //line = matcherComm.group(12);
+            //date = matcherComm.group(13);
 
             // if code gets here then toggles are used
             // enable toggle buttons
@@ -378,11 +413,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         byte[] data = arrayData;
         if(data.length>89){
 
-            // if data contains "^^", ignore packet
-            /*if(!(data[0]==94 && data[1]==94)){
-                return;
-            }*/
-
             /*
              <1>units dectected</1>
              <2>serial number</2>
@@ -410,6 +440,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String unit_num_6 = "" + data[9];
 
             String unit_number = unit_num_1 + unit_num_2 + unit_num_3 + unit_num_4 + unit_num_5 + unit_num_6;
+            UNIT_NUMBER = unit_number;
 
             // Get UNIT IP address
             String unit_ip_1 = "" + hexToLongInt(bytesToHex(new byte[]{data[33]}));
@@ -419,6 +450,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
             String unit_ip = unit_ip_1 + "." + unit_ip_2 + "." + unit_ip_3 + "." + unit_ip_4;
             tbUnitIP.setText(unit_ip);
+            UNIT_IP = unit_ip;
 
             // Get UNIT MAC address
             byte[] m1 = new byte[]{data[24]};
@@ -440,12 +472,14 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String unit_mac_6 = bytesToHex(m6);
 
             String unit_mac_address = unit_mac_1 + "-" + unit_mac_2 + "-" + unit_mac_3 + "-" + unit_mac_4 + "-" + unit_mac_5 + "-" + unit_mac_6;
+            UNIT_MAC = unit_mac_address;
 
             // Unit PORT
             String portHex = bytesToHex(new byte[]{data[52],data[53]});
             long port = Long.parseLong(portHex, 16);
 
             String dest_port = "" + port;
+            DEST_PORT = dest_port;
 
             // Get Dest IP address
             String dest_ip_1 = "" + hexToLongInt(bytesToHex(new byte[]{data[40]}));
@@ -454,6 +488,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String dest_ip_4 = "" + hexToLongInt(bytesToHex(new byte[]{data[43]}));
 
             String dest_ip = dest_ip_1 + "." + dest_ip_2 + "." + dest_ip_3 + "." + dest_ip_4;
+            DEST_IP = dest_ip;
 
             // Get UNIT MAC address
             m1 = new byte[]{data[66]};
@@ -475,6 +510,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String dest_mac_6 = bytesToHex(m6);
 
             String dest_mac_address = dest_mac_1 + "-" + dest_mac_2 + "-" + dest_mac_3 + "-" + dest_mac_4 + "-" + dest_mac_5 + "-" + dest_mac_6;
+            DEST_MAC = dest_mac_address;
 
             techUpdate(unitsDetected, serial_number, unit_number, unit_ip, unit_mac_address, dest_port, dest_ip, dest_mac_address);
 
@@ -497,15 +533,13 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private void getToggles(){
 
-        //sendUDP("^^Id-V",boxPort,"255.255.255.255");
-
-        sendUDP("^^IdX",3520,"255.255.255.255");
+        sendUDP("^^Id-V",boxPort,"255.255.255.255");
 
     }
 
     private void updateParameters(){
 
-        //sendUDP("^^IdX",3520,"255.255.255.255");
+        sendUDP("^^IdX",3520,"255.255.255.255");
 
     }
 
@@ -583,6 +617,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         // Buttons
         btnClearCallLog = (Button)findViewById(R.id.btnClearLog);
         btnGetToggles = (Button)findViewById(R.id.btnGetToggles);
+        btnAdvanced = (Button)findViewById(R.id.btnAdvanced);
 
         // Button clicks
         btnGetToggles.setOnClickListener( new View.OnClickListener() {
@@ -595,6 +630,12 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             @Override
             public void onClick(View v) {
                 clearCallLog();
+            }
+        });
+        btnAdvanced.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnAdvancedClicked(v);
             }
         });
 
@@ -709,6 +750,19 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         }.start();
         //--------------------------------------------------------
+
+    }
+
+    private void btnAdvancedClicked(View view){
+
+        Intent act2 = new Intent(view.getContext(), advanced.class);
+        act2.putExtra("unit_number",UNIT_NUMBER);
+        act2.putExtra("unit_ip",UNIT_IP);
+        act2.putExtra("unit_mac",UNIT_MAC);
+        act2.putExtra("dest_ip",DEST_IP);
+        act2.putExtra("dest_mac",DEST_MAC);
+        act2.putExtra("dest_port",DEST_PORT);
+        startActivity(act2);
 
     }
 
