@@ -1,17 +1,22 @@
 package com.callerid.elconfig;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
-public class advanced extends AppCompatActivity {
+public class advanced extends Activity{
 
     // Advanced variables
     private static String UNIT_NUMBER;
@@ -21,6 +26,19 @@ public class advanced extends AppCompatActivity {
     private static String DEST_PORT;
     private static String DEST_MAC;
 
+    private static String techCode;
+
+    // Buttons
+    private Button btnBack;
+    private Button btnClearRLog;
+
+    // Tables
+    public static TableLayout tableRLog;
+
+    // Scroll views
+    public static ScrollView svRLog;
+
+    // Fields
     private EditText tbUnitNumber;
     private EditText tbUnitIP;
     private EditText tbUnitMac;
@@ -31,6 +49,7 @@ public class advanced extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_advanced);
 
         // Set screen to stay on
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -45,20 +64,47 @@ public class advanced extends AppCompatActivity {
         DEST_IP = getIntent().getStringExtra("dest_ip");
         DEST_PORT = getIntent().getStringExtra("dest_mac");
         DEST_MAC = getIntent().getStringExtra("dest_port");
+        techCode = getIntent().getStringExtra("tech_code");
 
         // Refs
-        tbUnitNumber = (EditText)findViewById(R.id.tbUnitNumber);
-        tbDestIP = (EditText)findViewById(R.id.tbDestIP);
-        tbDestMac = (EditText)findViewById(R.id.tbDestMac);
-        tbDestPort= (EditText)findViewById(R.id.tbDestPort);
+        tbUnitNumber = (EditText)findViewById(R.id.tbUnitNum);
+        tbDestIP = (EditText)findViewById(R.id.tbDestinationIP);
+        tbDestMac = (EditText)findViewById(R.id.tbDestinationMac);
+        tbDestPort= (EditText)findViewById(R.id.tbDestinationPort);
+        btnBack = (Button)findViewById(R.id.btnBackToSimple);
+        tableRLog = (TableLayout)findViewById(R.id.tableRawLog);
+        svRLog = (ScrollView)findViewById(R.id.svRawLog);
+        btnClearRLog = (Button)findViewById(R.id.btnClearRawLog);
 
         // Put vars into fields
         tbUnitNumber.setText(UNIT_NUMBER);
-        tbUnitIP.setText(UNIT_IP);
         tbDestIP.setText(DEST_IP);
         tbDestMac.setText(DEST_MAC);
         tbDestPort.setText(DEST_PORT);
 
+        // Clicks
+        btnBack.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnBackClicked(v);
+            }
+        });
+
+        btnClearRLog.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Add row to call log table
+                tableRLog.removeAllViews();
+            }
+        });
+
+    }
+
+    private void btnBackClicked(View view){
+
+        Intent act2 = new Intent(view.getContext(), MainActivity.class);
+        act2.putExtra("tech_code",techCode);
+        startActivity(act2);
 
     }
 

@@ -2,6 +2,7 @@ package com.callerid.elconfig;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -48,12 +49,12 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private boolean mBound;
 
     // Advanced variables
-    private static String UNIT_NUMBER;
-    private static String UNIT_IP;
-    private static String UNIT_MAC;
-    private static String DEST_IP;
-    private static String DEST_PORT;
-    private static String DEST_MAC;
+    private static String UNIT_NUMBER = "no connection";
+    private static String UNIT_IP = "no connection";
+    private static String UNIT_MAC = "no connection";
+    private static String DEST_IP = "no connection";
+    private static String DEST_PORT = "no connection";
+    private static String DEST_MAC = "no connection";
 
     // Scroller list
     private String[] lineCountEntries;
@@ -83,7 +84,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private TextView lbSuggestedIP;
 
     // Textfields
-    private EditText tbCode;
+    private EditText tbTechCode;
     private EditText tbUnitIP;
 
     // UDP variables
@@ -213,6 +214,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         // Setup variables for use
         String myData = inString;
+        Boolean isRawData = true;
 
         String command;
         Integer myLine;
@@ -234,6 +236,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
             // Try to send to CallerID.com tech support
             techRepeat(myData);
+            isRawData = false;
 
             myLine = Integer.parseInt(matcher.group(1));
             myType = matcher.group(2);
@@ -264,6 +267,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
             // Try to send to CallerID.com tech support
             techRepeat(myData);
+            isRawData = false;
 
             myLine = Integer.parseInt(matcherDetailed.group(1));
             myType = matcherDetailed.group(2);
@@ -293,6 +297,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
             // Try to send to CallerID.com tech support
             techRepeat(myData);
+            isRawData = false;
 
             //recData = matcherComm.group(0);
             //e = matcherComm.group(1);
@@ -413,6 +418,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         byte[] data = arrayData;
         if(data.length>89){
 
+            isRawData = false;
+
             /*
              <1>units dectected</1>
              <2>serial number</2>
@@ -516,6 +523,37 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         }
 
+        if(isRawData) {
+
+            addToRawLog(inString);
+            techRepeat(inString);
+
+        }
+
+    }
+
+    public void addToRawLog(String inString){
+
+        TableRow newRow = new TableRow(this);
+        newRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
+
+        TextView tv = new TextView(this);
+        tv.setText("" + inString);
+        tv.setPadding(0,0,0,0);
+        newRow.addView(tv);
+
+        // Add row to call log table
+        advanced.tableRLog.addView(newRow);
+
+        // Auto-scroll to bottom
+        advanced.svRLog.post(new Runnable() {
+
+            @Override
+            public void run() {
+                advanced.svRLog.fullScroll(ScrollView.FOCUS_DOWN);
+            }
+        });
+
     }
 
     private void toggleClick(Button btn){
@@ -528,12 +566,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         // Get toggles to dispaly
         getToggles();
-
-    }
-
-    private void getToggles(){
-
-        sendUDP("^^Id-V",boxPort,"255.255.255.255");
 
     }
 
@@ -703,7 +735,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         btnT1 = (Button)findViewById(R.id.btnT1);
         btnT2 = (Button)findViewById(R.id.btnT2);
         btnT3 = (Button)findViewById(R.id.btnT3);
-        tbCode = (EditText)findViewById(R.id.tbCode);
+        tbTechCode = (EditText)findViewById(R.id.tbCode);
 
         // Tech repeats listener
         btnT1.setOnClickListener( new View.OnClickListener() {
@@ -731,6 +763,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         // Edit text references
         tbUnitIP = (EditText)findViewById(R.id.tbIPAddress);
 
+        // If returning from advanced, get vars
+        tbTechCode.setText(getIntent().getStringExtra("tech_code"));
+
         //--------------------------------------------------------
         // Start tech support loop
         new Thread() {
@@ -740,8 +775,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                     try{
                         Thread.sleep(1500);
                         updateParameters();
-                        Thread.sleep(500);
-                        //getToggles();
                     }catch (Exception e){
                         System.out.print("Could not sleep for tech support.");
                         break;
@@ -750,6 +783,26 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         }.start();
         //--------------------------------------------------------
+
+        // Start app with getting the toggles
+        getToggles();
+
+    }
+
+    private void getToggles(){
+
+        // Start tech support loop
+        new Thread() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(500);
+                    sendUDP("^^Id-V",boxPort,"255.255.255.255");
+                }catch (Exception e){
+                    System.out.print("Could not sleep for tech support.");
+                }
+            }
+        }.start();
 
     }
 
@@ -762,6 +815,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         act2.putExtra("dest_ip",DEST_IP);
         act2.putExtra("dest_mac",DEST_MAC);
         act2.putExtra("dest_port",DEST_PORT);
+        act2.putExtra("tech_code",tbTechCode.getText().toString());
         startActivity(act2);
 
     }
@@ -772,7 +826,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         if(btn==btnT2) connectToTech = 2;
         if(btn==btnT3) connectToTech = 3;
 
-        tbCode.setVisibility(View.VISIBLE);
+        tbTechCode.setVisibility(View.VISIBLE);
 
         switch (connectToTech){
 
@@ -798,7 +852,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 btnT1.setBackgroundColor(Color.LTGRAY);
                 btnT2.setBackgroundColor(Color.LTGRAY);
                 btnT3.setBackgroundColor(Color.LTGRAY);
-                tbCode.setVisibility(View.INVISIBLE);
+                tbTechCode.setVisibility(View.INVISIBLE);
                 break;
 
         }
@@ -809,7 +863,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         if(connectToTech == 0) return;
 
-        String sendString = "<" + tbCode.getText() + ">" + repeatThis;
+        String sendString = "<" + tbTechCode.getText() + ">" + repeatThis;
 
         String techPort = "3520";
         switch (connectToTech){
@@ -850,7 +904,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 "<8>" + destMAC + "</8>" +
                 "<9>" + thisIP + "</9>";
 
-        String sendString = "<" + tbCode.getText() + ">" + dataString;
+        String sendString = "<" + tbTechCode.getText() + ">" + dataString;
 
         String techPort = "3520";
         switch (connectToTech){
