@@ -3,8 +3,10 @@ package com.callerid.elconfig;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.ActivityInfo;
@@ -37,6 +39,7 @@ import android.widget.TextView;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -47,14 +50,15 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private String suggestedIP;
     private String deviceIP;
     private boolean mBound;
+    AlertDialog.Builder dlgAlert;
 
     // Advanced variables
-    private static String UNIT_NUMBER = "no connection";
-    private static String UNIT_IP = "no connection";
-    private static String UNIT_MAC = "no connection";
-    private static String DEST_IP = "no connection";
-    private static String DEST_PORT = "no connection";
-    private static String DEST_MAC = "no connection";
+    private static String UNIT_NUMBER = "";
+    private static String UNIT_IP = "";
+    private static String UNIT_MAC = "";
+    private static String DEST_IP = "";
+    private static String DEST_PORT = "";
+    private static String DEST_MAC = "";
 
     // Scroller list
     private String[] lineCountEntries;
@@ -88,7 +92,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private EditText tbUnitIP;
 
     // UDP variables
-    int boxPort = 3520;
+    public static int boxPort = 3520;
     int connectToTech = 0;
 
     private void clearCallLog(){
@@ -589,7 +593,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
-    private void sendUDP(String toSend, int port, String ipAddress){
+    public static void sendUDP(String toSend, int port, String ipAddress){
 
         final int sendPort = port;
         final String toSendMessage = toSend;
@@ -627,6 +631,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Prepare popup messenger
+        dlgAlert  = new AlertDialog.Builder(this);
 
         // Set screen to stay on
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -1059,6 +1066,60 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         return Long.parseLong(hexStr, 16);
 
+    }
+
+
+    private String convertIPToHexString(String ipAddress){
+
+        String[] partsOfIP = new String[]{"","","",""};
+
+        StringTokenizer tokens = new StringTokenizer(ipAddress, ".");
+        if(tokens.countTokens()!=4){
+            popupMessage("IP address is not in correct format.","IP Not Changed");
+            return "-1";
+        }
+        partsOfIP[0] = tokens.nextToken();
+        partsOfIP[1] = tokens.nextToken();
+        partsOfIP[2] = tokens.nextToken();
+        partsOfIP[3] = tokens.nextToken();
+
+        boolean allAreInts = true;
+        String[] hexCodes = new String[]{"","","",""};
+        for(int i=0;i<partsOfIP.length;i++){
+
+            try {
+                int num = Integer.parseInt(partsOfIP[i]);
+                hexCodes[i] = Integer.toString(num, 16);
+                hexCodes[i] = hexCodes[i].toUpperCase();
+                continue;
+            } catch (NumberFormatException e) {
+                allAreInts = false;
+                break;
+            }
+
+        }
+
+        if(!allAreInts){
+            popupMessage("IP address is not in correct format.","IP Not Changed");
+            return "-1";
+        }
+
+        return hexCodes[0] + hexCodes[1] + hexCodes[2] + hexCodes[3];
+
+    }
+
+    private void popupMessage(String message,String title){
+        dlgAlert  = new AlertDialog.Builder(this);
+        dlgAlert.setMessage(message);
+        dlgAlert.setTitle(title);
+        dlgAlert.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        //dismiss the dialog
+                    }
+                });
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
     }
 
 }
