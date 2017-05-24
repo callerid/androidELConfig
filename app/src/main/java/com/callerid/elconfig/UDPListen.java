@@ -50,6 +50,9 @@ public class UDPListen extends Service {
         serviceCallbacks = callbacks;
     }
 
+    public int getBoxPort(){
+        return socket.getLocalPort();
+    }
 
     // ** Main thread that listens for UDP traffic from CallerID.com unit.
     Thread idle = new Thread(new Runnable() {
@@ -61,17 +64,25 @@ public class UDPListen extends Service {
             try{
 
                 socket = new DatagramSocket(null);
-                SocketAddress address = new InetSocketAddress("0.0.0.0",3520);
+                int boxPort = MainActivity.boxPort;
+                SocketAddress address = new InetSocketAddress("0.0.0.0",boxPort);
                 socket.setReuseAddress(true);
                 socket.setBroadcast(true);
                 socket.bind(address);
 
                 byte[] buffer = new byte[65507];
                 Boolean looping = true;
-                byte[] rtnArray = null;
+                byte[] rtnArray;
                 while (looping) {
                     DatagramPacket dp = new DatagramPacket(buffer, buffer.length);
                     try {
+
+                        int currentPort = getBoxPort();
+                        if(currentPort!=MainActivity.boxPort){
+                            socket.close();
+                            rebootIdleThread();
+                            break;
+                        }
 
                         socket.receive(dp);
                         recString = new String(dp.getData(), 0, dp.getLength());
@@ -98,6 +109,23 @@ public class UDPListen extends Service {
 
         }
     });
+
+    private void rebootIdleThread(){
+
+        new Thread() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(500);
+                    idle.run();
+                }catch (Exception e){
+                    System.out.print("Failed to reboot listening thread.");
+                }
+            }
+        }.start();
+
+
+    }
 
 }
 

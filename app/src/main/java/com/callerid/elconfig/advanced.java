@@ -2,6 +2,7 @@ package com.callerid.elconfig;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -17,7 +18,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
+import java.io.FileOutputStream;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
@@ -59,6 +62,7 @@ public class advanced extends Activity{
     private EditText tbDestIP;
     private EditText tbDestMac;
     private EditText tbDestPort;
+    private TextView lbListeningPort;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,9 +83,18 @@ public class advanced extends Activity{
         UNIT_IP = getIntent().getStringExtra("unit_ip");
         UNIT_MAC = getIntent().getStringExtra("unit_mac");
         DEST_IP = getIntent().getStringExtra("dest_ip");
-        DEST_PORT = getIntent().getStringExtra("dest_mac");
-        DEST_MAC = getIntent().getStringExtra("dest_port");
+        DEST_PORT = getIntent().getStringExtra("dest_port");
+        DEST_MAC = getIntent().getStringExtra("dest_mac");
         techCode = getIntent().getStringExtra("tech_code");
+
+        int list_port = MainActivity.mService.getBoxPort();
+        String listeningOn = "Listening On: ";
+        if(list_port==-1){
+            listeningOn += "none";
+        }
+        else{
+            listeningOn += "" + list_port;
+        }
 
         // Refs
         tbUnitNumber = (EditText)findViewById(R.id.tbUnitNum);
@@ -94,12 +107,14 @@ public class advanced extends Activity{
         btnClearRLog = (Button)findViewById(R.id.btnClearRawLog);
         btnResetELDefaults = (Button)findViewById(R.id.btnResetEthernetDefaults);
         btnResetUDefaults = (Button)findViewById(R.id.btnResetUnitDefaults);
+        lbListeningPort = (TextView)findViewById(R.id.lbListenPort);
 
         // Put vars into fields
         tbUnitNumber.setText(UNIT_NUMBER);
         tbDestIP.setText(DEST_IP);
         tbDestMac.setText(DEST_MAC);
         tbDestPort.setText(DEST_PORT);
+        lbListeningPort.setText(listeningOn);
 
         // Clicks
         btnBack.setOnClickListener( new View.OnClickListener() {
@@ -182,8 +197,9 @@ public class advanced extends Activity{
                 if (!hasFocus) {
 
                     // Save unit number
-                    if(convertIPToHexString(tbDestIP.getText().toString())!="-1"){
-                        MainActivity.sendUDP("^^IdD" + tbDestIP.getText().toString(),MainActivity.boxPort,"255.255.255.255");//External IP
+                    String hexIP = convertIPToHexString(tbDestIP.getText().toString());
+                    if(hexIP!="-1"){
+                        MainActivity.sendUDP("^^IdD" + hexIP,MainActivity.boxPort,"255.255.255.255");//External IP
                         updateParameters();
                         return;
                     }
@@ -213,6 +229,9 @@ public class advanced extends Activity{
                         hexPort = hexPort.toUpperCase();
 
                         MainActivity.sendUDP("^^IdT"+hexPort,MainActivity.boxPort,"255.255.255.255");//Port Number
+                        MainActivity.boxPort=num;
+                        lbListeningPort.setText("Listening on: " + num);
+                        savePortChange();
                         updateParameters();
 
                     }catch (Exception e){
@@ -324,7 +343,13 @@ public class advanced extends Activity{
                 int num = Integer.parseInt(partsOfIP[i]);
                 hexCodes[i] = Integer.toString(num, 16);
                 hexCodes[i] = hexCodes[i].toUpperCase();
+
+                if(hexCodes[i].length()==1){
+                    hexCodes[i] = "0" + hexCodes[i];
+                }
+
                 continue;
+
             } catch (NumberFormatException e) {
                 allAreInts = false;
                 break;
@@ -372,27 +397,24 @@ public class advanced extends Activity{
                     new Thread() {
                         @Override
                         public void run() {
-                            while(true){
-                                try{
+                            try{
 
-                                    MainActivity.sendUDP("^^IdDFFFFFFFF",MainActivity.boxPort,"255.255.255.255");//Destination IP
-                                    Thread.sleep(400);
-                                    MainActivity.sendUDP("^^IdU000000000001",MainActivity.boxPort,"255.255.255.255");//Unit ID
-                                    Thread.sleep(400);
-                                    MainActivity.sendUDP("^^IdIC0A8005A",MainActivity.boxPort,"255.255.255.255");//Internal IP
-                                    Thread.sleep(400);
-                                    MainActivity.sendUDP("^^IdCFFFFFFFFFFFF",MainActivity.boxPort,"255.255.255.255");//Destination MAC address
-                                    Thread.sleep(400);
-                                    MainActivity.sendUDP("^^IdM0620101332CC",MainActivity.boxPort,"255.255.255.255");//Internal MAC address
-                                    Thread.sleep(400);
-                                    MainActivity.sendUDP("^^IdT0DC0",MainActivity.boxPort,"255.255.255.255");//Port Number
-                                    Thread.sleep(400);
-                                    updateParameters();
+                                MainActivity.sendUDP("^^IdDFFFFFFFF",MainActivity.boxPort,"255.255.255.255");//Destination IP
+                                Thread.sleep(400);
+                                MainActivity.sendUDP("^^IdU000000000001",MainActivity.boxPort,"255.255.255.255");//Unit ID
+                                Thread.sleep(400);
+                                MainActivity.sendUDP("^^IdIC0A8005A",MainActivity.boxPort,"255.255.255.255");//Internal IP
+                                Thread.sleep(400);
+                                MainActivity.sendUDP("^^IdCFFFFFFFFFFFF",MainActivity.boxPort,"255.255.255.255");//Destination MAC address
+                                Thread.sleep(400);
+                                MainActivity.sendUDP("^^IdM0620101332CC",MainActivity.boxPort,"255.255.255.255");//Internal MAC address
+                                Thread.sleep(400);
+                                MainActivity.sendUDP("^^IdT0DC0",MainActivity.boxPort,"255.255.255.255");//Port Number
+                                Thread.sleep(400);
+                                updateParameters();
 
-                                }catch (Exception e){
-                                    System.out.print("Could not reset ethernet defaults.");
-                                    break;
-                                }
+                            }catch(Exception e){
+                                System.out.print("Could not reset ethernet defaults.");
                             }
                         }
                     }.start();
@@ -415,18 +437,15 @@ public class advanced extends Activity{
                     new Thread() {
                         @Override
                         public void run() {
-                            while(true){
-                                try{
 
-                                    MainActivity.sendUDP("^^Id-N0000007701",MainActivity.boxPort,"255.255.255.255");//External IP
-                                    Thread.sleep(400);
-                                    MainActivity.sendUDP("^^Id-R",MainActivity.boxPort,"255.255.255.255");//Reset
-                                    updateParameters();
+                            try{
+                                MainActivity.sendUDP("^^Id-N0000007701",MainActivity.boxPort,"255.255.255.255");//External IP
+                                Thread.sleep(400);
+                                MainActivity.sendUDP("^^Id-R",MainActivity.boxPort,"255.255.255.255");//Reset
+                                updateParameters();
 
-                                }catch (Exception e){
-                                    System.out.print("Could not reset unit defaults.");
-                                    break;
-                                }
+                            }catch (Exception e){
+                                System.out.print("Could not reset unit defaults.");
                             }
                         }
                     }.start();
@@ -446,12 +465,27 @@ public class advanced extends Activity{
             public void run() {
                 try{
                     Thread.sleep(500);
-                    MainActivity.sendUDP("^^IdX",3520,"255.255.255.255");
+                    MainActivity.sendUDP("^^IdX",MainActivity.boxPort,"255.255.255.255");
                 }catch (Exception e){
                     System.out.print("Could not sleep for updating params.");
                 }
             }
         }.start();
+    }
+
+    private void savePortChange(){
+
+        String saveString = ""+MainActivity.boxPort;
+
+        try{
+            FileOutputStream fos = openFileOutput("elConfigData", Context.MODE_PRIVATE);
+            fos.write(saveString.getBytes());
+            fos.close();
+        }
+        catch (Exception e){
+            System.out.print("Problem saving.");
+        }
+
     }
 
 }

@@ -36,6 +36,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -46,7 +48,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends Activity implements ServiceCallbacks {
 
     private String inString = "Waiting...";
-    private UDPListen mService;
+    public static UDPListen mService;
     private String suggestedIP;
     private String deviceIP;
     private boolean mBound;
@@ -62,6 +64,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     // Scroller list
     private String[] lineCountEntries;
+    private ArrayAdapter<String> sprLineCntAdapter;
 
     private TableLayout tableCallLog;
     private ScrollView svCallLog;
@@ -75,6 +78,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private Button btnO;
     private Button btnB;
     private Button btnK;
+
+    private Spinner sprLnCnt;
 
     private Button btnGetToggles;
     private Button btnClearCallLog;
@@ -92,7 +97,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private EditText tbUnitIP;
 
     // UDP variables
-    public static int boxPort = 3520;
+    public static int boxPort;
     int connectToTech = 0;
 
     private void clearCallLog(){
@@ -293,6 +298,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         String o;
         String b;
         String k;
+        String line;
 
         Pattern myCommPattern = Pattern.compile("([Ee])([Cc])([Xx])([Uu])([Dd])([Aa])([Ss])([Oo])([Bb])([Kk])([Tt]) L=(\\d{1,2}) (\\d{1,2}/\\d{1,2} (\\d{1,2}:\\d{1,2}:\\d{1,2}))");
         Matcher matcherComm = myCommPattern.matcher(myData);
@@ -315,7 +321,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             b = matcherComm.group(9);
             k = matcherComm.group(10);
             //t = matcherComm.group(11);
-            //line = matcherComm.group(12);
+            line = matcherComm.group(12);
             //date = matcherComm.group(13);
 
             // if code gets here then toggles are used
@@ -328,6 +334,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             btnO.setEnabled(true);
             btnB.setEnabled(true);
             btnK.setEnabled(true);
+
+            // Set line count
+            sprLnCnt.setSelection(sprLineCntAdapter.getPosition(line));
 
             // Set all toggle colors
             int toggleIsSetBkgColor = Color.GREEN;
@@ -575,7 +584,17 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private void updateParameters(){
 
-        sendUDP("^^IdX",3520,"255.255.255.255");
+        new Thread() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(500);
+                    sendUDP("^^IdX",boxPort,"255.255.255.255");
+                }catch (Exception e){
+                    System.out.print("Could not get toggles.");
+                }
+            }
+        }.start();
 
     }
 
@@ -643,12 +662,19 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         // Populate sprLineCount
         lineCountEntries = new String[]{"1","5","9","17","21","25","33"};
-        Spinner sprLineCount = (Spinner)findViewById(R.id.sprLineCount);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,lineCountEntries);
-        sprLineCount.setAdapter(adapter);
+        sprLnCnt = (Spinner)findViewById(R.id.sprLineCount);
+        sprLineCntAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,lineCountEntries);
+        sprLnCnt.setAdapter(sprLineCntAdapter);
+        sprLnCnt.setSelection(0);
 
         // Scrollview References
         svCallLog = (ScrollView)findViewById(R.id.svCallLog);
+
+        // Label references
+        lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
+
+        // Edit text references
+        tbUnitIP = (EditText)findViewById(R.id.tbIPAddress);
 
         // Table References
         tableCallLog = (TableLayout)findViewById(R.id.tableCallLog);
@@ -764,11 +790,25 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         });
 
-        // Label references
-        lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
+        // Editing saves
+        // -- saving
+        tbUnitIP.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
 
-        // Edit text references
-        tbUnitIP = (EditText)findViewById(R.id.tbIPAddress);
+                    // Save unit number
+                    if(convertIPToHexString(tbUnitIP.getText().toString())!="-1"){
+                        MainActivity.sendUDP("^^IdD" + tbUnitIP.getText().toString(),MainActivity.boxPort,"255.255.255.255");//Unit IP
+                        updateParameters();
+                        return;
+                    }
+
+                    tbUnitIP.setText(UNIT_IP);
+
+                }
+            }
+        });
 
         // If returning from advanced, get vars
         tbTechCode.setText(getIntent().getStringExtra("tech_code"));
@@ -947,6 +987,26 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     protected void onStart(){
         super.onStart();
 
+        String tempBoxPort="";
+
+        try {
+            FileInputStream fis = openFileInput("elConfigData");
+            byte[] input = new byte[fis.available()];
+            while (fis.read(input) != -1) {
+            }
+            tempBoxPort += new String(input);
+        }
+        catch (Exception e){
+           System.out.print("Error reading elConfigData.");
+        }
+
+        try{
+            boxPort = Integer.parseInt(tempBoxPort);
+        }catch (Exception e){
+            System.out.print("Failed to parse elconfig data.");
+            boxPort = 3520;
+        }
+
         lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
 
         ActivityCompat.requestPermissions(MainActivity.this,
@@ -988,6 +1048,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                     // bind to Service
                     Intent intent = new Intent(this, UDPListen.class);
                     mBound = bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+
 
                 } else {
 
@@ -1068,7 +1129,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
-
     private String convertIPToHexString(String ipAddress){
 
         String[] partsOfIP = new String[]{"","","",""};
@@ -1091,7 +1151,13 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 int num = Integer.parseInt(partsOfIP[i]);
                 hexCodes[i] = Integer.toString(num, 16);
                 hexCodes[i] = hexCodes[i].toUpperCase();
+
+                if(hexCodes[i].length()==1){
+                    hexCodes[i] = "0" + hexCodes[i];
+                }
+
                 continue;
+
             } catch (NumberFormatException e) {
                 allAreInts = false;
                 break;
@@ -1120,6 +1186,22 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 });
         dlgAlert.setCancelable(true);
         dlgAlert.create().show();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+
+        String saveString = ""+boxPort;
+
+        try{
+            FileOutputStream fos = openFileOutput("elConfigData", Context.MODE_PRIVATE);
+            fos.write(saveString.getBytes());
+            fos.close();
+        }
+        catch (Exception e){
+            System.out.print("Problem saving.");
+        }
     }
 
 }
