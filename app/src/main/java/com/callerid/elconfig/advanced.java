@@ -1,5 +1,6 @@
 package com.callerid.elconfig;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -22,6 +23,7 @@ import android.widget.TextView;
 
 import java.io.FileOutputStream;
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class advanced extends Activity{
@@ -38,6 +40,7 @@ public class advanced extends Activity{
     private static String DEST_IP;
     private static String DEST_PORT;
     private static String DEST_MAC;
+    private boolean continueMacAddress = true;
 
     private static String techCode;
 
@@ -244,39 +247,6 @@ public class advanced extends Activity{
         });
 
         // Changing DEST MAC --------------------------------------------------------------------------
-        // -- Formatting
-        tbDestMac.setInputType(InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
-        tbDestMac.setSingleLine();
-        InputFilter[] filters = new InputFilter[1];
-
-        filters[0] = new InputFilter() {
-
-            @Override
-            public CharSequence filter(CharSequence source, int start, int end,
-                                       Spanned dest, int dstart, int dend) {
-                if (end > start) {
-                    String destTxt = dest.toString();
-                    String resultingTxt = destTxt.substring(0, dstart) + source.subSequence(start, end) + destTxt.substring(dend);
-                    if (resultingTxt.matches("([0-9a-fA-F][0-9a-fA-F]-){0,5}[0-9a-fA-F]"))
-                    {
-
-                    }
-                    else if(resultingTxt.matches("([0-9a-fA-F][0-9a-fA-F]-){0,4}[0-9a-fA-F][0-9a-fA-F]")){
-                        return source.subSequence(start, end)+"-" ;
-                    }
-                    else if(resultingTxt.matches("([0-9a-fA-F][0-9a-fA-F]-){0,5}[0-9a-fA-F][0-9a-fA-F]")){
-
-                    }
-                    else
-                    {
-                        return "";
-                    }
-                }
-                return null;
-            }
-        };
-        tbDestMac.setFilters(filters);
-
         //-- Saving
         tbDestMac.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -487,5 +457,7 @@ public class advanced extends Activity{
         }
 
     }
+
+
 
 }

@@ -90,10 +90,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
         android:hint="FF-FF-FF-FF-FF-FF"
-        android:inputType="textPersonName"
+        android:digits="0123456789ABCDEF-"
+        android:inputType="textCapCharacters"
         android:maxLength="17"
         app:layout_constraintLeft_toLeftOf="@+id/tbDestinationPort"
         app:layout_constraintTop_toBottomOf="@+id/tbDestinationPort" />
