@@ -140,6 +140,7 @@
         android:ems="10"
         android:hint="[enter IP address]"
         android:inputType="text"
+        android:digits="0123456789."
         android:textSize="10sp"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintLeft_toRightOf="@+id/lbTitle"

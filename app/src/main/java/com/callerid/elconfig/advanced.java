@@ -33,6 +33,11 @@ public class advanced extends Activity{
             Pattern.compile("^((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9])\\.){0,3}"+
                     "((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9])){0,1}$");
 
+    public static final Pattern MAC_WITHOUT_DASHED =
+            Pattern.compile("^([0-9A-Fa-f]{0,2}\\-){0,5}[0-9A-Fa-f]{1,2}$");
+    public static final Pattern MAC_WITH_DASHES =
+            Pattern.compile("([0-9A-Fa-f]{2}\\-){1,6}$");
+
     // Advanced variables
     private static String UNIT_NUMBER;
     private static String UNIT_IP;
@@ -247,6 +252,31 @@ public class advanced extends Activity{
         });
 
         // Changing DEST MAC --------------------------------------------------------------------------
+        // -- formatting
+        InputFilter macIF = new InputFilter() {
+            @Override
+            public CharSequence filter(CharSequence source, int start, int end,
+                                       Spanned dest, int dstart, int dend) {
+
+                String futurePossibility = dest.toString() + source.toString();
+                boolean matchedWithoutDashes = MAC_WITHOUT_DASHED.matcher(futurePossibility).matches();
+                boolean matchedWithDashes = MAC_WITH_DASHES.matcher(futurePossibility).matches();
+                if((matchedWithDashes||matchedWithoutDashes)&&source!=""){
+                    if(futurePossibility.length()>1 &&
+                            futurePossibility.length()<17){
+                        if((futurePossibility.length()-2)%3==0 ||
+                                futurePossibility.length()==2){
+                            return source.toString().substring(end-1).toUpperCase()+"-";
+                        }
+                    }
+                    return source.toString().substring(end-1).toUpperCase();
+                }
+
+                return "";
+            }
+        };
+        tbDestMac.setFilters(new InputFilter[]{macIF});
+        tbDestMac.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         //-- Saving
         tbDestMac.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
