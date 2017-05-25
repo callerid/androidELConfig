@@ -3,6 +3,8 @@ package com.callerid.elconfig;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,17 +18,20 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import java.io.FileOutputStream;
+import java.util.Calendar;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class advanced extends Activity{
+public class advanced extends Activity implements DatePickerDialog.OnDateSetListener,TimePickerDialog.OnTimeSetListener{
 
     // Commons
     public static final Pattern PARTIAl_IP_ADDRESS =
@@ -56,6 +61,7 @@ public class advanced extends Activity{
     private Button btnClearRLog;
     private Button btnResetELDefaults;
     private Button btnResetUDefaults;
+    private Button btnSetDateTime;
 
     // Tables
     public static TableLayout tableRLog;
@@ -71,6 +77,9 @@ public class advanced extends Activity{
     private EditText tbDestMac;
     private EditText tbDestPort;
     private TextView lbListeningPort;
+    private TextView lbTime;
+
+    int month,day,year,finalMonth,finalDay,finalYear,hour,minute,finalHour,finalMinute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +125,8 @@ public class advanced extends Activity{
         btnResetELDefaults = (Button)findViewById(R.id.btnResetEthernetDefaults);
         btnResetUDefaults = (Button)findViewById(R.id.btnResetUnitDefaults);
         lbListeningPort = (TextView)findViewById(R.id.lbListenPort);
+        btnSetDateTime = (Button)findViewById(R.id.btnSetCurrentTime);
+        lbTime = (TextView)findViewById(R.id.lbTimeDisplay);
 
         // Put vars into fields
         tbUnitNumber.setText(UNIT_NUMBER);
@@ -319,6 +330,48 @@ public class advanced extends Activity{
 
         //---------------------------------------------------------------------------------------------
 
+        btnSetDateTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Calendar c = Calendar.getInstance();
+                month = c.get(Calendar.MONTH);
+                day = c.get(Calendar.DAY_OF_MONTH);
+                year = c.get(Calendar.YEAR);
+
+                DatePickerDialog dpd = new DatePickerDialog(advanced.this,advanced.this,year,month,day);
+                dpd.show();
+
+            }
+        });
+
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+        finalYear = year;
+        finalMonth = month+1;
+        finalDay = dayOfMonth;
+
+        Calendar c = Calendar.getInstance();
+        hour = c.get(Calendar.HOUR_OF_DAY);
+        minute = c.get(Calendar.MINUTE);
+
+        TimePickerDialog tpd = new TimePickerDialog(advanced.this,advanced.this,hour,minute,false);
+        tpd.show();
+
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+        finalHour = hourOfDay;
+        finalMinute = minute;
+
+        String displayedTime = "Time: " + finalMonth + "/" + finalDay + "/" + finalYear + "  " + finalHour + ":" + finalMinute;
+        lbTime.setText(displayedTime);
+
     }
 
     private String convertIPToHexString(String ipAddress){
@@ -487,7 +540,5 @@ public class advanced extends Activity{
         }
 
     }
-
-
 
 }

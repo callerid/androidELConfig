@@ -339,6 +339,10 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             btnK.setEnabled(true);
 
             // Set line count
+            if(sprLineCntAdapter.getPosition(line)==-1){
+                line = "1";
+                setLineCount(line);
+            }
             sprLnCnt.setSelection(sprLineCntAdapter.getPosition(line));
 
             // Set all toggle colors
@@ -544,6 +548,51 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             addToRawLog(inString);
             techRepeat(inString);
 
+        }
+
+    }
+
+    private void setLineCount(String lineCnt){
+
+        try{
+
+            int line = Integer.parseInt(lineCnt);
+            String sendString = "";
+            switch (line){
+
+                case 1:
+                    sendString = "^^Id-N0000007701\r\n";
+                    break;
+
+                case 5:
+                    sendString = "^^Id-N0000007705\r\n";
+                    break;
+
+                case 9:
+                    sendString = "^^Id-N0000007709\r\n";
+                    break;
+
+                case 17:
+                    sendString = "^^Id-N0000007711\r\n";
+                    break;
+
+                case 21:
+                    sendString = "^^Id-N0000007715\r\n";
+                    break;
+
+                case 25:
+                    sendString = "^^Id-N0000007719\r\n";
+                    break;
+
+                case 33:
+                    sendString = "^^Id-N0000007721\r\n";
+                    break;
+            }
+
+            sendUDP(sendString,boxPort,"255.255.255.255");
+
+        }catch (Exception e){
+            return;
         }
 
     }
