@@ -20,6 +20,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.util.Xml;
@@ -84,6 +86,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private Button btnGetToggles;
     private Button btnClearCallLog;
     private Button btnAdvanced;
+    private Button btnSetSuggestedIP;
 
     private Button btnT1;
     private Button btnT2;
@@ -683,6 +686,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         btnClearCallLog = (Button)findViewById(R.id.btnClearLog);
         btnGetToggles = (Button)findViewById(R.id.btnGetToggles);
         btnAdvanced = (Button)findViewById(R.id.btnAdvanced);
+        btnSetSuggestedIP = (Button)findViewById(R.id.btnUseSuggested);
 
         // Button clicks
         btnGetToggles.setOnClickListener( new View.OnClickListener() {
@@ -791,6 +795,21 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         });
 
         // Editing saves
+        // -- formatting
+        tbUnitIP.addTextChangedListener(new TextWatcher() {
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void beforeTextChanged(CharSequence s,int start,int count,int after) {}
+
+            private String mPreviousText = "";
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(advanced.PARTIAl_IP_ADDRESS.matcher(s).matches()) {
+                    mPreviousText = s.toString();
+                } else {
+                    s.replace(0, s.length(), mPreviousText);
+                }
+            }
+        });
         // -- saving
         tbUnitIP.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -799,12 +818,30 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
                     // Save unit number
                     if(convertIPToHexString(tbUnitIP.getText().toString())!="-1"){
-                        MainActivity.sendUDP("^^IdD" + tbUnitIP.getText().toString(),MainActivity.boxPort,"255.255.255.255");//Unit IP
+                        MainActivity.sendUDP("^^IdD" + convertIPToHexString(tbUnitIP.getText().toString()),MainActivity.boxPort,"255.255.255.255");//Unit IP
                         updateParameters();
                         return;
                     }
 
                     tbUnitIP.setText(UNIT_IP);
+
+                }
+            }
+        });
+
+        btnSetSuggestedIP.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+
+                    // Save unit number
+                    if(convertIPToHexString(suggestedIP)!="-1"){
+                        MainActivity.sendUDP("^^IdD" + convertIPToHexString(suggestedIP),MainActivity.boxPort,"255.255.255.255");//Unit IP
+                        updateParameters();
+                        return;
+                    }
+
+                    tbUnitIP.setText(suggestedIP);
 
                 }
             }

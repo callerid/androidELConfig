@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 public class advanced extends Activity{
 
     // Commons
-    private static final Pattern PARTIAl_IP_ADDRESS =
+    public static final Pattern PARTIAl_IP_ADDRESS =
             Pattern.compile("^((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9])\\.){0,3}"+
                     "((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9])){0,1}$");
 

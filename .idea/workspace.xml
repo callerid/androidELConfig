@@ -22,8 +22,9 @@
     <list default="true" id="44554377-5fb8-4d90-9293-a8bb64958958" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     </list>
     <ignored path="ELConfig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +59,8 @@
       <file leaf-file-name="advanced.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="249" column="19" selection-start-line="249" selection-start-column="19" selection-end-line="249" selection-end-column="19" />
+            <state relative-caret-position="119">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding>
                 <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
                 <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
@@ -74,8 +75,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="986" column="28" selection-start-line="986" selection-start-column="28" selection-end-line="986" selection-end-column="28" />
+            <state relative-caret-position="284">
+              <caret line="811" column="11" selection-start-line="811" selection-start-column="11" selection-end-line="811" selection-end-column="11" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -93,8 +94,9 @@
                 <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#33520:33997" expanded="false" />
+                <element signature="class#35026:35503" expanded="false" />
                 <element signature="method#display#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -112,18 +114,21 @@
             <state relative-caret-position="1105">
               <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1141#1142#0" expanded="false" />
+                <element signature="e#1171#1172#0" expanded="false" />
+                <element signature="e#1265#1266#0" expanded="false" />
+                <element signature="e#1309#1310#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_advanced.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_advanced.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+            <state relative-caret-position="234">
+              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -132,10 +137,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="5763">
+            <state relative-caret-position="5695">
               <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
               <folding />
             </state>
@@ -1992,13 +1997,13 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/Common.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       </list>
     </option>
   </component>
@@ -2033,9 +2038,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2044,51 +2047,11 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2446,7 +2409,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2529,8 +2492,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2546,8 +2510,11 @@
         <state relative-caret-position="1088">
           <caret line="77" column="60" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
           <folding>
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2580,8 +2547,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2597,8 +2565,11 @@
         <state relative-caret-position="850">
           <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
           <folding>
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2634,8 +2605,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2651,8 +2623,11 @@
         <state relative-caret-position="1139">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2688,8 +2663,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2705,8 +2681,11 @@
         <state relative-caret-position="1139">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2742,8 +2721,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2759,8 +2739,11 @@
         <state relative-caret-position="1139">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2796,8 +2779,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2839,8 +2823,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2882,8 +2867,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2915,8 +2901,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2965,8 +2952,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3008,8 +2996,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3051,8 +3040,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3084,8 +3074,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3117,8 +3108,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3160,8 +3152,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3203,8 +3196,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3246,8 +3240,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3293,14 +3288,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java">
@@ -3328,32 +3323,49 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/Common.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
+            <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
+            <element signature="method#btnBackClicked#0;class#advanced#0" expanded="false" />
+            <element signature="method#updateParameters#0;class#advanced#0" expanded="false" />
+            <element signature="method#savePortChange#0;class#advanced#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="986" column="28" selection-start-line="986" selection-start-column="28" selection-end-line="986" selection-end-column="28" />
+        <state relative-caret-position="284">
+          <caret line="811" column="11" selection-start-line="811" selection-start-column="11" selection-end-line="811" selection-end-column="11" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -3371,8 +3383,9 @@
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#33520:33997" expanded="false" />
+            <element signature="class#35026:35503" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3383,28 +3396,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="249" column="19" selection-start-line="249" selection-start-column="19" selection-end-line="249" selection-end-column="19" />
-          <folding>
-            <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
-            <element signature="method#btnBackClicked#0;class#advanced#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#advanced#0" expanded="false" />
-            <element signature="method#savePortChange#0;class#advanced#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="5695">
+          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
