@@ -43,6 +43,7 @@ import java.io.FileOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.Calendar;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -302,6 +303,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         String b;
         String k;
         String line;
+        String date;
 
         Pattern myCommPattern = Pattern.compile("([Ee])([Cc])([Xx])([Uu])([Dd])([Aa])([Ss])([Oo])([Bb])([Kk])([Tt]) L=(\\d{1,2}) (\\d{1,2}/\\d{1,2} (\\d{1,2}:\\d{1,2}:\\d{1,2}))");
         Matcher matcherComm = myCommPattern.matcher(myData);
@@ -325,7 +327,23 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             k = matcherComm.group(10);
             //t = matcherComm.group(11);
             line = matcherComm.group(12);
-            //date = matcherComm.group(13);
+            date = matcherComm.group(13);
+
+            Pattern dateMatcher = Pattern.compile("(([0-9]{1,2})/([0-9]{1,2}) ([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}))");
+            Matcher dateMatch = dateMatcher.matcher(date);
+            String month ="00";
+            String day = "00";
+            String hour = "00";
+            String minute = "00";
+            if(dateMatch.find()){
+                month = dateMatch.group(1);
+                day = dateMatch.group(2);
+                hour = dateMatch.group(3);
+                minute = dateMatch.group(4);
+            }
+            Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            advanced.setDisplayTime(month,day,""+year,hour,minute);
 
             // if code gets here then toggles are used
             // enable toggle buttons

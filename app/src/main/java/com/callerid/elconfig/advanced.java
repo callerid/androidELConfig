@@ -77,9 +77,9 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
     private EditText tbDestMac;
     private EditText tbDestPort;
     private TextView lbListeningPort;
-    private TextView lbTime;
+    private static TextView lbTime;
 
-    int month,day,year,finalMonth,finalDay,finalYear,hour,minute,finalHour,finalMinute;
+    private static int month,day,year,finalMonth,finalDay,finalYear,hour,minute,finalHour,finalMinute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -369,7 +369,72 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
         finalHour = hourOfDay;
         finalMinute = minute;
 
-        String displayedTime = "Time: " + finalMonth + "/" + finalDay + "/" + finalYear + "  " + finalHour + ":" + finalMinute;
+        setTime(finalMonth,finalDay,finalHour,finalMinute);
+
+    }
+
+    private void setTime(int month,int day, int hour, int minute){
+
+        String strMonth = "" + month;
+        String strDay = "" + day;
+        String strHour = "" + hour;
+        String strMinute = "" + minute;
+
+        if(strMonth.length()==1){
+            strMonth = "0" + strMonth;
+        }
+
+        if(strDay.length()==1){
+            strDay = "0" + strDay;
+        }
+
+        if(strHour.length()==1){
+            strHour = "0" + strHour;
+        }
+
+        if(strMinute.length()==1){
+            strMinute = "0" + strMinute;
+        }
+
+        setDisplayTime(strMonth,strDay,"" + finalYear,strHour,strMinute);
+        String sendString = "^^Id-Z" + strMonth + strDay + strHour + strMinute + "\r";
+
+        MainActivity.sendUDP(sendString,MainActivity.boxPort,"255.255.255.255");
+
+    }
+
+    public static void setDisplayTime(String strMonth,String strDay,String strYear,String strHour, String strMinute){
+
+        if(strMonth.length()==1){
+            strMonth = "0" + strMonth;
+        }
+
+        if(strDay.length()==1){
+            strDay = "0" + strDay;
+        }
+
+        int pHour = Integer.parseInt(strHour);
+
+        if(strMinute.length()==1){
+            strMinute = "0" + strMinute;
+        }
+
+        String strHourDisplay;
+        String amPm;
+        if(pHour>12){
+            strHourDisplay = "" + (pHour-12);
+            amPm = " PM";
+        }
+        else{
+            strHourDisplay = "" + pHour;
+            amPm = " AM";
+        }
+
+        if(pHour==12){
+            amPm = " PM";
+        }
+
+        String displayedTime = "Time: " + strMonth + "/" + strDay + "/" + strYear + "  " + strHourDisplay + ":" + strMinute + amPm;
         lbTime.setText(displayedTime);
 
     }

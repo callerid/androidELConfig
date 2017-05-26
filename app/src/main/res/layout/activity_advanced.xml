@@ -188,8 +188,8 @@
         android:text="Clear"
         app:layout_constraintTop_toTopOf="@+id/btnSetCurrentTime"
         android:layout_marginTop="0dp"
-        android:layout_marginLeft="250dp"
-        app:layout_constraintLeft_toRightOf="@+id/lbTimeDisplay" />
+        app:layout_constraintLeft_toRightOf="@+id/btnSetCurrentTime"
+        android:layout_marginLeft="300dp" />
 
     <TextView
         android:id="@+id/textView11"
