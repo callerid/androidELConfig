@@ -22,7 +22,6 @@
     <list default="true" id="44554377-5fb8-4d90-9293-a8bb64958958" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
     </list>
     <ignored path="ELConfig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,6 +59,9 @@
             <state relative-caret-position="1751">
               <caret line="132" column="47" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
               <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#5341#5342#0" expanded="false" />
+                <element signature="e#5390#5391#0" expanded="false" />
                 <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
                 <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
                 <element signature="method#setTime#0;class#advanced#0" expanded="false" />
@@ -77,8 +79,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="682" column="21" selection-start-line="682" selection-start-column="21" selection-end-line="682" selection-end-column="21" />
+            <state relative-caret-position="194">
+              <caret line="673" column="27" selection-start-line="673" selection-start-column="27" selection-end-line="673" selection-end-column="27" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -90,11 +92,11 @@
                 <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#24232#24233#0" expanded="true" />
-                <element signature="e#24276#24277#0" expanded="true" />
-                <element signature="e#30440#30498#0" expanded="false" />
-                <element signature="e#30542#30969#0" expanded="true" />
-                <element signature="e#30968#30969#0" expanded="true" />
+                <element signature="e#24234#24235#0" expanded="true" />
+                <element signature="e#24278#24279#0" expanded="true" />
+                <element signature="e#30442#30500#0" expanded="false" />
+                <element signature="e#30544#30971#0" expanded="true" />
+                <element signature="e#30970#30971#0" expanded="true" />
                 <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -103,15 +105,15 @@
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#38595:39072" expanded="false" />
+                <element signature="class#38597:39074" expanded="false" />
                 <element signature="method#display#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-                <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-                <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+                <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+                <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -2403,7 +2405,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2479,11 +2481,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2492,15 +2494,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2535,11 +2537,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2548,15 +2550,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2594,11 +2596,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2607,15 +2609,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2653,11 +2655,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2666,15 +2668,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2712,11 +2714,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2725,15 +2727,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2771,11 +2773,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2784,15 +2786,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2822,11 +2824,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2835,15 +2837,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2873,11 +2875,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2886,15 +2888,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2914,11 +2916,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2927,15 +2929,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2972,11 +2974,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2985,15 +2987,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3023,11 +3025,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3036,15 +3038,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3074,11 +3076,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3087,15 +3089,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3115,11 +3117,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3128,15 +3130,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3156,11 +3158,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3169,15 +3171,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3207,11 +3209,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3220,15 +3222,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3258,11 +3260,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3271,15 +3273,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3309,11 +3311,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3322,15 +3324,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3418,6 +3420,9 @@
         <state relative-caret-position="1751">
           <caret line="132" column="47" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5341#5342#0" expanded="false" />
+            <element signature="e#5390#5391#0" expanded="false" />
             <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
             <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
             <element signature="method#setTime#0;class#advanced#0" expanded="false" />
@@ -3455,8 +3460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="682" column="21" selection-start-line="682" selection-start-column="21" selection-end-line="682" selection-end-column="21" />
+        <state relative-caret-position="194">
+          <caret line="673" column="27" selection-start-line="673" selection-start-column="27" selection-end-line="673" selection-end-column="27" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -3468,11 +3473,11 @@
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#24232#24233#0" expanded="true" />
-            <element signature="e#24276#24277#0" expanded="true" />
-            <element signature="e#30440#30498#0" expanded="false" />
-            <element signature="e#30542#30969#0" expanded="true" />
-            <element signature="e#30968#30969#0" expanded="true" />
+            <element signature="e#24234#24235#0" expanded="true" />
+            <element signature="e#24278#24279#0" expanded="true" />
+            <element signature="e#30442#30500#0" expanded="false" />
+            <element signature="e#30544#30971#0" expanded="true" />
+            <element signature="e#30970#30971#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3481,15 +3486,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#38595:39072" expanded="false" />
+            <element signature="class#38597:39074" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
-            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
+            <marker date="1496339365151" expanded="false" signature="21403:21471" ph="(Thread) run() → {" />
+            <marker date="1496339365151" expanded="false" signature="31154:31564" ph="{...}" />
           </folding>
         </state>
       </provider>

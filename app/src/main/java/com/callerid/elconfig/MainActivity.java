@@ -671,14 +671,14 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             @Override
             public void run() {
                 int cnt = 0;
-                while(cnt<3){
+                while(cnt<5){
                     try{
                         sendUDP(command,boxPort,"255.255.255.255");
                         Thread.sleep(400);
                         getToggles();
                         Thread.sleep(400);
                     }catch (Exception e){
-                        System.out.print("Could not sleep for auto updating.");
+                        System.out.print("Could not sleep for toggle updating.");
                         break;
                     }
                     cnt++;
