@@ -29,6 +29,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,6 +65,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private static String DEST_IP = "";
     private static String DEST_PORT = "";
     private static String DEST_MAC = "";
+    private static String UNIT_TIME = "";
 
     // Scroller list
     private String[] lineCountEntries;
@@ -103,6 +105,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     // UDP variables
     public static int boxPort;
     int connectToTech = 0;
+    boolean lineCntLoaded = false;
 
     private void clearCallLog(){
 
@@ -336,14 +339,24 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String hour = "00";
             String minute = "00";
             if(dateMatch.find()){
-                month = dateMatch.group(1);
-                day = dateMatch.group(2);
-                hour = dateMatch.group(3);
-                minute = dateMatch.group(4);
+                month = dateMatch.group(2);
+                day = dateMatch.group(3);
+                hour = dateMatch.group(4);
+                minute = dateMatch.group(5);
             }
             Calendar calendar = Calendar.getInstance();
             int year = calendar.get(Calendar.YEAR);
             advanced.setDisplayTime(month,day,""+year,hour,minute);
+            String displayHour;
+            String amPM = "AM";
+            if(Integer.parseInt(hour)>12){
+                displayHour = "" + (Integer.parseInt(hour)-12);
+                amPM = "PM";
+            }
+            else{
+                displayHour = hour;
+            }
+            UNIT_TIME = month + "/" + day + "/" + year + " " + displayHour + ":" + minute + " " + amPM;
 
             // if code gets here then toggles are used
             // enable toggle buttons
@@ -357,8 +370,10 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             btnK.setEnabled(true);
 
             // Set line count
-            if(sprLineCntAdapter.getPosition(line)==-1){
-                line = "1";
+            int index = sprLineCntAdapter.getPosition(line);
+            lineCntLoaded=true;
+            if(index==-1){
+                line = "01";
                 setLineCount(line);
             }
             sprLnCnt.setSelection(sprLineCntAdapter.getPosition(line));
@@ -494,8 +509,11 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String unit_ip_4 = "" + hexToLongInt(bytesToHex(new byte[]{data[36]}));
 
             String unit_ip = unit_ip_1 + "." + unit_ip_2 + "." + unit_ip_3 + "." + unit_ip_4;
-            tbUnitIP.setText(unit_ip);
             UNIT_IP = unit_ip;
+
+            if(!tbUnitIP.hasFocus()){
+                tbUnitIP.setText(unit_ip);
+            }
 
             // Get UNIT MAC address
             byte[] m1 = new byte[]{data[24]};
@@ -572,6 +590,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private void setLineCount(String lineCnt){
 
+        if(!lineCntLoaded)return;
+
         try{
 
             int line = Integer.parseInt(lineCnt);
@@ -617,6 +637,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     public void addToRawLog(String inString){
 
+        if(advanced.tableRLog==null)return;
+
         TableRow newRow = new TableRow(this);
         newRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT,TableRow.LayoutParams.WRAP_CONTENT));
 
@@ -642,14 +664,27 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private void toggleClick(Button btn){
 
         String preCmd = btn.getText().toString();
-        String command = "^^Id-" + flipCase(preCmd);
+        final String command = "^^Id-" + flipCase(preCmd);
 
         // Send command to change toggles
-        sendUDP(command,boxPort,"255.255.255.255");
-
-        // Get toggles to dispaly
-        getToggles();
-
+        new Thread() {
+            @Override
+            public void run() {
+                int cnt = 0;
+                while(cnt<3){
+                    try{
+                        sendUDP(command,boxPort,"255.255.255.255");
+                        Thread.sleep(400);
+                        getToggles();
+                        Thread.sleep(400);
+                    }catch (Exception e){
+                        System.out.print("Could not sleep for auto updating.");
+                        break;
+                    }
+                    cnt++;
+                }
+            }
+        }.start();
     }
 
     private void updateParameters(){
@@ -731,11 +766,26 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         // Populate sprLineCount
-        lineCountEntries = new String[]{"1","5","9","17","21","25","33"};
+        lineCountEntries = new String[]{"01","05","09","17","21","25","33"};
         sprLnCnt = (Spinner)findViewById(R.id.sprLineCount);
         sprLineCntAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,lineCountEntries);
         sprLnCnt.setAdapter(sprLineCntAdapter);
-        sprLnCnt.setSelection(0);
+
+        sprLnCnt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                setLineCount(lineCountEntries[sprLnCnt.getSelectedItemPosition()]);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                getToggles();
+            }
+        });
 
         // Scrollview References
         svCallLog = (ScrollView)findViewById(R.id.svCallLog);
@@ -885,7 +935,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
                     // Save unit number
                     if(convertIPToHexString(tbUnitIP.getText().toString())!="-1"){
-                        MainActivity.sendUDP("^^IdD" + convertIPToHexString(tbUnitIP.getText().toString()),MainActivity.boxPort,"255.255.255.255");//Unit IP
+                        MainActivity.sendUDP("^^IdI" + convertIPToHexString(tbUnitIP.getText().toString()),MainActivity.boxPort,"255.255.255.255");//Unit IP
                         updateParameters();
                         return;
                     }
@@ -904,8 +954,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                     // Save unit number
                     if(convertIPToHexString(suggestedIP)!="-1"){
                         MainActivity.sendUDP("^^IdD" + convertIPToHexString(suggestedIP),MainActivity.boxPort,"255.255.255.255");//Unit IP
-                        updateParameters();
-                        return;
                     }
 
                     tbUnitIP.setText(suggestedIP);
@@ -924,10 +972,10 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             public void run() {
                 while(true){
                     try{
-                        Thread.sleep(1500);
+                        Thread.sleep(2500);
                         updateParameters();
                     }catch (Exception e){
-                        System.out.print("Could not sleep for tech support.");
+                        System.out.print("Could not sleep for auto updating.");
                         break;
                     }
                 }
@@ -967,6 +1015,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         act2.putExtra("dest_mac",DEST_MAC);
         act2.putExtra("dest_port",DEST_PORT);
         act2.putExtra("tech_code",tbTechCode.getText().toString());
+        act2.putExtra("unit_time",UNIT_TIME);
         startActivity(act2);
 
     }

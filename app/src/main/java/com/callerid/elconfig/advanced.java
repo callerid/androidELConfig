@@ -42,6 +42,8 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
             Pattern.compile("^([0-9A-Fa-f]{0,2}\\-){0,5}[0-9A-Fa-f]{1,2}$");
     public static final Pattern MAC_WITH_DASHES =
             Pattern.compile("([0-9A-Fa-f]{2}\\-){1,6}$");
+    public static final Pattern MAC_FULL =
+            Pattern.compile("[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}");
 
     // Advanced variables
     private static String UNIT_NUMBER;
@@ -74,7 +76,7 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
     private EditText tbUnitIP;
     private EditText tbUnitMac;
     private EditText tbDestIP;
-    private EditText tbDestMac;
+    public static EditText tbDestMac;
     private EditText tbDestPort;
     private TextView lbListeningPort;
     private static TextView lbTime;
@@ -103,6 +105,7 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
         DEST_PORT = getIntent().getStringExtra("dest_port");
         DEST_MAC = getIntent().getStringExtra("dest_mac");
         techCode = getIntent().getStringExtra("tech_code");
+        String displayTime = getIntent().getStringExtra("unit_time");
 
         int list_port = MainActivity.mService.getBoxPort();
         String listeningOn = "Listening On: ";
@@ -127,11 +130,11 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
         lbListeningPort = (TextView)findViewById(R.id.lbListenPort);
         btnSetDateTime = (Button)findViewById(R.id.btnSetCurrentTime);
         lbTime = (TextView)findViewById(R.id.lbTimeDisplay);
+        lbTime.setText("Time: " + displayTime);
 
         // Put vars into fields
         tbUnitNumber.setText(UNIT_NUMBER);
         tbDestIP.setText(DEST_IP);
-        tbDestMac.setText(DEST_MAC);
         tbDestPort.setText(DEST_PORT);
         lbListeningPort.setText(listeningOn);
 
@@ -264,15 +267,17 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
 
         // Changing DEST MAC --------------------------------------------------------------------------
         // -- formatting
-        InputFilter macIF = new InputFilter() {
+        final InputFilter macIF = new InputFilter() {
             @Override
             public CharSequence filter(CharSequence source, int start, int end,
                                        Spanned dest, int dstart, int dend) {
 
                 String futurePossibility = dest.toString() + source.toString();
+
                 boolean matchedWithoutDashes = MAC_WITHOUT_DASHED.matcher(futurePossibility).matches();
                 boolean matchedWithDashes = MAC_WITH_DASHES.matcher(futurePossibility).matches();
-                if((matchedWithDashes||matchedWithoutDashes)&&source!=""){
+
+                if((matchedWithDashes||matchedWithoutDashes)&&source.length()!=0){
                     if(futurePossibility.length()>1 &&
                             futurePossibility.length()<17){
                         if((futurePossibility.length()-2)%3==0 ||
@@ -286,7 +291,20 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
                 return "";
             }
         };
-        tbDestMac.setFilters(new InputFilter[]{macIF});
+
+        tbDestMac.setText(DEST_MAC);
+        new Thread() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(400);
+                    tbDestMac.setFilters(new InputFilter[]{macIF});
+                }catch(Exception e){
+                    System.out.print("Could not set DEST MAC.");
+                }
+            }
+        }.start();
+
         tbDestMac.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         //-- Saving
         tbDestMac.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -322,6 +340,7 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
                     String hexMac = partsOfMac[0] + partsOfMac[1] + partsOfMac[2] + partsOfMac[3] + partsOfMac[4] + partsOfMac[5];
 
                     MainActivity.sendUDP("^^IdC"+hexMac,MainActivity.boxPort,"255.255.255.255");//Destination MAC address
+                    DEST_MAC = hexMac;
                     updateParameters();
 
                 }
@@ -435,7 +454,9 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
         }
 
         String displayedTime = "Time: " + strMonth + "/" + strDay + "/" + strYear + "  " + strHourDisplay + ":" + strMinute + amPm;
-        lbTime.setText(displayedTime);
+        if(lbTime!=null){
+            lbTime.setText(displayedTime);
+        }
 
     }
 

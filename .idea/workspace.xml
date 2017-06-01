@@ -23,7 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" />
     </list>
     <ignored path="ELConfig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,9 +57,13 @@
       <file leaf-file-name="advanced.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+            <state relative-caret-position="1751">
+              <caret line="132" column="47" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
               <folding>
+                <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
+                <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
+                <element signature="method#setTime#0;class#advanced#0" expanded="false" />
+                <element signature="method#setDisplayTime#0;class#advanced#0" expanded="false" />
                 <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
                 <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
                 <element signature="method#btnBackClicked#0;class#advanced#0" expanded="false" />
@@ -74,8 +77,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="222" column="57" selection-start-line="222" selection-start-column="57" selection-end-line="222" selection-end-column="57" />
+            <state relative-caret-position="347">
+              <caret line="682" column="21" selection-start-line="682" selection-start-column="21" selection-end-line="682" selection-end-column="21" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -83,12 +86,15 @@
                 <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#24232#24233#0" expanded="true" />
+                <element signature="e#24276#24277#0" expanded="true" />
+                <element signature="e#30440#30498#0" expanded="false" />
+                <element signature="e#30542#30969#0" expanded="true" />
+                <element signature="e#30968#30969#0" expanded="true" />
                 <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -97,13 +103,15 @@
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#37000:37477" expanded="false" />
+                <element signature="class#38595:39072" expanded="false" />
                 <element signature="method#display#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+                <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+                <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -111,14 +119,27 @@
       </file>
       <file leaf-file-name="activity_advanced.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="3706">
+            <state relative-caret-position="3723">
               <caret line="219" column="8" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="8" />
               <folding />
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="2414">
+              <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1972,10 +1993,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/Common.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2010,7 +2031,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2019,53 +2039,12 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2073,11 +2052,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="Nexus_6_API_23" />
+    <property name="device.picker.selection" value="540050344404480904cb" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.3.1" />
-    <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
+    <property name="DEBUGGABLE_DEVICE" value="tablet_express-x80-540050344404480904cb" />
     <property name="DEBUGGABLE_PROCESS" value="com.callerid.elconfig" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
@@ -2424,7 +2403,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2432,7 +2411,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2469,7 +2448,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="251" />
+      <option name="time" value="286" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2496,12 +2475,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2510,13 +2492,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2547,12 +2531,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2561,13 +2548,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2601,12 +2590,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2615,13 +2607,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2655,12 +2649,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2669,13 +2666,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2709,12 +2708,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2723,13 +2725,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2763,12 +2767,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2777,13 +2784,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2809,12 +2818,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2823,13 +2835,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2855,12 +2869,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2869,13 +2886,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2891,12 +2910,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2905,13 +2927,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2944,12 +2968,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2958,13 +2985,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2990,12 +3019,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3004,13 +3036,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3036,12 +3070,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3050,13 +3087,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3072,12 +3111,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3086,13 +3128,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3108,12 +3152,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3122,13 +3169,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3154,12 +3203,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3168,13 +3220,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3200,12 +3254,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3214,13 +3271,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3246,12 +3305,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3260,13 +3322,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3306,14 +3370,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java">
@@ -3349,33 +3413,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="3706">
-          <caret line="219" column="8" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+        <state relative-caret-position="1751">
+          <caret line="132" column="47" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
           <folding>
+            <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
+            <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
+            <element signature="method#setTime#0;class#advanced#0" expanded="false" />
+            <element signature="method#setDisplayTime#0;class#advanced#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
             <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
             <element signature="method#btnBackClicked#0;class#advanced#0" expanded="false" />
@@ -3385,10 +3431,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="3723">
+          <caret line="219" column="8" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="222" column="57" selection-start-line="222" selection-start-column="57" selection-end-line="222" selection-end-column="57" />
+        <state relative-caret-position="347">
+          <caret line="682" column="21" selection-start-line="682" selection-start-column="21" selection-end-line="682" selection-end-column="21" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -3396,12 +3464,15 @@
             <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#30440#30498#0" expanded="false" />
+            <element signature="e#30542#30969#0" expanded="true" />
+            <element signature="e#30968#30969#0" expanded="true" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3410,13 +3481,15 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#37000:37477" expanded="false" />
+            <element signature="class#38595:39072" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <marker date="1496333421258" expanded="false" signature="21401:21469" ph="(Thread) run() → {" />
+            <marker date="1496333421258" expanded="false" signature="31152:31562" ph="{...}" />
           </folding>
         </state>
       </provider>
