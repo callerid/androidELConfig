@@ -25,10 +25,12 @@ import android.text.TextWatcher;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.util.Xml;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,6 +40,8 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -90,13 +94,12 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private Button btnClearCallLog;
     private Button btnAdvanced;
     private Button btnSetSuggestedIP;
+    private Button btnSetIP;
+    private TextView lbSuggestedWarning;
 
     private Button btnT1;
     private Button btnT2;
     private Button btnT3;
-
-    // Labels
-    private TextView lbSuggestedIP;
 
     // Textfields
     private EditText tbTechCode;
@@ -127,56 +130,56 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         if(line.length()==1){
             line = "0" + line;
         }
-        tv.setText(line);
-        tv.setPadding(0,0,25,0);
+        tv.setText(line.trim());
+        tv.setPadding(0,0,15,0);
         newRow.addView(tv);
 
         // I/O
         tv = new TextView(this);
         tv.setText("" + myType);
-        tv.setPadding(0,0,60,0);
+        tv.setPadding(0,0,25,0);
         newRow.addView(tv);
 
         // Start/End
         tv = new TextView(this);
         tv.setText("" + myIndicator);
-        tv.setPadding(0,0,70,0);
+        tv.setPadding(0,0,20,0);
         newRow.addView(tv);
 
         // Duration
         tv = new TextView(this);
         tv.setText("" + myDuration);
-        tv.setPadding(0,0,25,0);
+        tv.setPadding(0,0,15,0);
         newRow.addView(tv);
 
         // Checksum
         tv = new TextView(this);
         tv.setText("" + myCheckSum);
-        tv.setPadding(0,0,40,0);
+        tv.setPadding(0,0,20,0);
         newRow.addView(tv);
 
         // Ring
         tv = new TextView(this);
         tv.setText("" + myRings);
-        tv.setPadding(0,0,70,0);
+        tv.setPadding(0,0,25,0);
         newRow.addView(tv);
 
         // Date & Time
         tv = new TextView(this);
         tv.setText("" + myDateTime);
-        tv.setPadding(0,0,50,0);
+        tv.setPadding(0,0,15,0);
         newRow.addView(tv);
 
         // Number
         tv = new TextView(this);
         tv.setText("" + myNumber);
-        tv.setPadding(0,0,60,0);
+        tv.setPadding(0,0,45,0);
         newRow.addView(tv);
 
         // Name
         tv = new TextView(this);
         tv.setText("" + myName);
-        tv.setPadding(0,0,60,0);
+        tv.setPadding(0,0,20,0);
         newRow.addView(tv);
 
         // Add row to call log table
@@ -206,7 +209,56 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         if(line.length()==1){
             line = "0" + line;
         }
-        tv.setText(line + "    " + myType + "    " + myDateTime);
+        tv.setText(line.trim());
+        tv.setPadding(0,0,15,0);
+        newRow.addView(tv);
+
+        // I/O
+        tv = new TextView(this);
+        tv.setText("" + myType);
+        tv.setPadding(0,0,25,0);
+        newRow.addView(tv);
+
+        // Start/End
+        tv = new TextView(this);
+        tv.setText(" ");
+        tv.setPadding(0,0,20,0);
+        newRow.addView(tv);
+
+        // Duration
+        tv = new TextView(this);
+        tv.setText("    ");
+        tv.setPadding(0,0,15,0);
+        newRow.addView(tv);
+
+        // Checksum
+        tv = new TextView(this);
+        tv.setText(" ");
+        tv.setPadding(0,0,20,0);
+        newRow.addView(tv);
+
+        // Ring
+        tv = new TextView(this);
+        tv.setText(" ");
+        tv.setPadding(0,0,25,0);
+        newRow.addView(tv);
+
+        // Date & Time
+        tv = new TextView(this);
+        tv.setText("" + myDateTime);
+        tv.setPadding(0,0,15,0);
+        newRow.addView(tv);
+
+        // Number
+        tv = new TextView(this);
+        tv.setText("              ");
+        tv.setPadding(0,0,45,0);
+        newRow.addView(tv);
+
+        // Name
+        tv = new TextView(this);
+        tv.setText("              ");
+        tv.setPadding(0,0,20,0);
         newRow.addView(tv);
 
         // Add row to call log table
@@ -508,6 +560,32 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String unit_ip_3 = "" + hexToLongInt(bytesToHex(new byte[]{data[35]}));
             String unit_ip_4 = "" + hexToLongInt(bytesToHex(new byte[]{data[36]}));
 
+            long[] unit_ip_chk = new long[4];
+            unit_ip_chk[0] = hexToLongInt(bytesToHex(new byte[]{data[33]}));
+            unit_ip_chk[1] = hexToLongInt(bytesToHex(new byte[]{data[34]}));
+            unit_ip_chk[2] = hexToLongInt(bytesToHex(new byte[]{data[35]}));
+            unit_ip_chk[3] = hexToLongInt(bytesToHex(new byte[]{data[36]}));
+
+            long[] sugg_ip = new long[4];
+            String[] sugg_ip_str = suggestedIP.split("[.]");
+            for(int i=0;i<sugg_ip.length;i++){
+                sugg_ip[i] = Long.parseLong(sugg_ip_str[i]);
+            }
+
+            boolean unitIsSuggMatch = true;
+            for(int i=0;i<sugg_ip.length;i++){
+                if(sugg_ip[i] != unit_ip_chk[i]) unitIsSuggMatch = false;
+            }
+
+            if(!unitIsSuggMatch){
+                lbSuggestedWarning.setVisibility(View.VISIBLE);
+                lbSuggestedWarning.setTextColor(Color.RED);
+                btnSetSuggestedIP.setTextColor(Color.RED);
+            }else{
+                lbSuggestedWarning.setVisibility(View.INVISIBLE);
+                btnSetSuggestedIP.setTextColor(Color.BLACK);
+            }
+
             String unit_ip = unit_ip_1 + "." + unit_ip_2 + "." + unit_ip_3 + "." + unit_ip_4;
             UNIT_IP = unit_ip;
 
@@ -628,6 +706,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
 
             sendUDP(sendString,boxPort,"255.255.255.255");
+            getToggles();
 
         }catch (Exception e){
             return;
@@ -674,9 +753,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 while(cnt<5){
                     try{
                         sendUDP(command,boxPort,"255.255.255.255");
-                        Thread.sleep(400);
+                        Thread.sleep(200);
                         getToggles();
-                        Thread.sleep(400);
+                        Thread.sleep(200);
                     }catch (Exception e){
                         System.out.print("Could not sleep for toggle updating.");
                         break;
@@ -790,20 +869,21 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         // Scrollview References
         svCallLog = (ScrollView)findViewById(R.id.svCallLog);
 
-        // Label references
-        lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
-
         // Edit text references
         tbUnitIP = (EditText)findViewById(R.id.tbIPAddress);
 
         // Table References
         tableCallLog = (TableLayout)findViewById(R.id.tableCallLog);
 
+        // Labels
+        lbSuggestedWarning = (TextView)findViewById(R.id.lbTitle);
+
         // Buttons
         btnClearCallLog = (Button)findViewById(R.id.btnClearLog);
         btnGetToggles = (Button)findViewById(R.id.btnGetToggles);
         btnAdvanced = (Button)findViewById(R.id.btnAdvanced);
         btnSetSuggestedIP = (Button)findViewById(R.id.btnUseSuggested);
+        btnSetIP = (Button)findViewById(R.id.btnSetIp);
 
         // Button clicks
         btnGetToggles.setOnClickListener( new View.OnClickListener() {
@@ -885,6 +965,15 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         });
 
+        btnSetIP.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // cause leave focus of ip so set ip
+                tbUnitIP.clearFocus();
+                btnSetIP.requestFocus();
+            }
+        });
+
         // Tech repeats
         btnT1 = (Button)findViewById(R.id.btnT1);
         btnT2 = (Button)findViewById(R.id.btnT2);
@@ -927,6 +1016,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 }
             }
         });
+
         // -- saving
         tbUnitIP.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -946,24 +1036,37 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
         });
 
-        btnSetSuggestedIP.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        btnSetSuggestedIP.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-
-                    // Save unit number
-                    if(convertIPToHexString(suggestedIP)!="-1"){
-                        MainActivity.sendUDP("^^IdD" + convertIPToHexString(suggestedIP),MainActivity.boxPort,"255.255.255.255");//Unit IP
-                    }
-
-                    tbUnitIP.setText(suggestedIP);
-
+            public void onClick(View v) {
+                // Save unit number
+                if(convertIPToHexString(suggestedIP)!="-1"){
+                    MainActivity.sendUDP("^^IdI" + convertIPToHexString(suggestedIP),MainActivity.boxPort,"255.255.255.255");//Unit IP
                 }
+
+                tbUnitIP.setText(suggestedIP);
             }
         });
 
         // If returning from advanced, get vars
         tbTechCode.setText(getIntent().getStringExtra("tech_code"));
+        try{
+            connectToTech = Integer.parseInt(getIntent().getStringExtra("tech_port"));
+        }catch (Exception e){
+            connectToTech = 0;
+        }
+
+        switch(connectToTech){
+            case 1:
+                selectingTech(btnT1);
+                break;
+            case 2:
+                selectingTech(btnT2);
+                break;
+            case 3:
+                selectingTech(btnT3);
+                break;
+        }
 
         //--------------------------------------------------------
         // Start tech support loop
@@ -984,7 +1087,19 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         //--------------------------------------------------------
 
         // Start app with getting the toggles
-        getToggles();
+        new Thread() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(500);
+                    getToggles();
+                    Thread.sleep(200);
+                    getToggles();
+                }catch (Exception e){
+                    System.out.print("Could not load up on create.");
+                }
+            }
+        }.start();
 
     }
 
@@ -1016,6 +1131,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         act2.putExtra("dest_port",DEST_PORT);
         act2.putExtra("tech_code",tbTechCode.getText().toString());
         act2.putExtra("unit_time",UNIT_TIME);
+        act2.putExtra("tech_port","" + connectToTech);
         startActivity(act2);
 
     }
@@ -1160,8 +1276,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             boxPort = 3520;
         }
 
-        lbSuggestedIP = (TextView)findViewById(R.id.lbSuggestedIP);
-
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{
                         Manifest.permission.INTERNET,
@@ -1196,7 +1310,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
                     suggestedIP = ip.substring(0,ip.lastIndexOf(".")) + "." + newEnding;
 
-                    lbSuggestedIP.setText("Suggested IP: " + suggestedIP);
+                    btnSetSuggestedIP.setText("Use: " + suggestedIP);
 
                     // bind to Service
                     Intent intent = new Intent(this, UDPListen.class);
@@ -1339,6 +1453,13 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 });
         dlgAlert.setCancelable(true);
         dlgAlert.create().show();
+    }
+
+    private void hideKeyboard(View view) {
+        InputMethodManager manager = (InputMethodManager) view.getContext()
+                .getSystemService(INPUT_METHOD_SERVICE);
+        if (manager != null)
+            manager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     @Override

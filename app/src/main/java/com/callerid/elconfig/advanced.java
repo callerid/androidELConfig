@@ -15,8 +15,10 @@ import android.text.InputFilter;
 import android.text.InputType;
 import android.text.Spanned;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -81,6 +83,8 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
     private TextView lbListeningPort;
     private static TextView lbTime;
 
+    private static int connectToTech;
+
     private static int month,day,year,finalMonth,finalDay,finalYear,hour,minute,finalHour,finalMinute;
 
     @Override
@@ -106,6 +110,12 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
         DEST_MAC = getIntent().getStringExtra("dest_mac");
         techCode = getIntent().getStringExtra("tech_code");
         String displayTime = getIntent().getStringExtra("unit_time");
+
+        try{
+            connectToTech = Integer.parseInt(getIntent().getStringExtra("tech_port"));
+        }catch (Exception e){
+            connectToTech = 0;
+        }
 
         int list_port = MainActivity.mService.getBoxPort();
         String listeningOn = "Listening On: ";
@@ -265,6 +275,17 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
             }
         });
 
+        tbDestPort.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == 66) {
+                    tbDestPort.clearFocus();
+                    btnBack.requestFocus();
+                    return true; //this is required to stop sending key event to parent
+                }
+                return false;
+            }
+        });
+
         // Changing DEST MAC --------------------------------------------------------------------------
         // -- formatting
         final InputFilter macIF = new InputFilter() {
@@ -286,6 +307,13 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
                         }
                     }
                     return source.toString().substring(end-1).toUpperCase();
+                }
+                else if (matchedWithDashes==false && matchedWithoutDashes==false && futurePossibility.length()>=3 && futurePossibility.length()<18){
+                    Pattern isHexChar = Pattern.compile("[A-Fa-f0-9]");
+                    boolean matchedHexChar = isHexChar.matcher(source.toString()).matches();
+                    if(matchedHexChar){
+                        return "-";
+                    }
                 }
 
                 return "";
@@ -523,6 +551,7 @@ public class advanced extends Activity implements DatePickerDialog.OnDateSetList
 
         Intent act2 = new Intent(view.getContext(), MainActivity.class);
         act2.putExtra("tech_code",techCode);
+        act2.putExtra("tech_port","" + connectToTech);
         startActivity(act2);
 
     }

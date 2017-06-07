@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.callerid.elconfig.MainActivity">
+    tools:context="com.callerid.elconfig.MainActivity"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
 
     <Button
         android:id="@+id/btnK"
@@ -73,26 +75,15 @@
 
     <TextView
         android:id="@+id/lbTitle"
-        android:layout_width="57dp"
-        android:layout_height="18dp"
-        android:layout_marginLeft="24dp"
-        android:text="Your IP:"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:layout_marginStart="24dp" />
-
-    <TextView
-        android:id="@+id/lbSuggestedIP"
-        android:layout_width="210dp"
-        android:layout_height="17dp"
-        android:layout_marginLeft="32dp"
-        android:text="Suggested: 192.168.0.90"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toRightOf="@+id/textView4"
-        android:layout_marginStart="32dp"
+        android:layout_width="335dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        android:text="We suggest you change unit IP address to below: "
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -100,23 +91,23 @@
         android:layout_width="266dp"
         android:layout_height="29dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
         android:text="ELConfig for Android"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnUseSuggested"
-        android:layout_width="151dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:text="Use Suggested IP"
-        app:layout_constraintLeft_toRightOf="@+id/tbIPAddress"
-        app:layout_constraintTop_toBottomOf="@+id/lbSuggestedIP" />
+        android:layout_width="170dp"
+        android:layout_height="37dp"
+        android:text="Use [n/a]"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lbTitle"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/tbCode"
@@ -128,7 +119,8 @@
         android:ems="10"
         android:hint="[code]"
         android:inputType="number"
-        android:textSize="10sp"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
         app:layout_constraintLeft_toRightOf="@+id/btnT3"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
@@ -136,29 +128,17 @@
         android:id="@+id/tbIPAddress"
         android:layout_width="119dp"
         android:layout_height="35dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:digits="0123456789."
         android:ems="10"
         android:hint="[enter IP address]"
         android:inputType="text"
-        android:digits="0123456789."
-        android:textSize="10sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintLeft_toRightOf="@+id/lbTitle"
+        android:textSize="14sp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintLeft_toRightOf="@+id/textView4"
         android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="IP Settings"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/btnUseSuggested"
+        android:layout_marginTop="3dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -214,19 +194,20 @@
         android:layout_marginStart="29dp"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/lbTitle"
-        app:layout_constraintLeft_toRightOf="@+id/btnT1"
+        app:layout_constraintLeft_toRightOf="@+id/btnSetIp"
         android:layout_marginLeft="8dp" />
 
     <Button
         android:id="@+id/btnGetToggles"
-        android:layout_width="152dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Retreive Toggles"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbTitle" />
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/btnUseSuggested"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/btnD"
@@ -286,7 +267,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/btnUseSuggested"
         app:layout_constraintLeft_toRightOf="@+id/btnGetToggles"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="55dp" />
 
     <TableLayout
         android:layout_width="658dp"
@@ -368,5 +349,25 @@
         android:layout_marginTop="8dp"
         app:layout_constraintLeft_toRightOf="@+id/btnK"
         android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device IP:"
+        app:layout_constraintLeft_toRightOf="@+id/btnUseSuggested"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="@+id/btnUseSuggested"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btnSetIp"
+        android:layout_width="68dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:text="Set IP"
+        app:layout_constraintLeft_toRightOf="@+id/tbIPAddress"
+        app:layout_constraintTop_toTopOf="@+id/tbIPAddress" />
 
 </android.support.constraint.ConstraintLayout>
