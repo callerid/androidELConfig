@@ -88,7 +88,8 @@
         android:selectAllOnFocus="true"
         android:maxLength="15"
         app:layout_constraintLeft_toRightOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:imeOptions="actionDone"/>
 
     <EditText
         android:id="@+id/tbDestinationMac"
@@ -103,7 +104,8 @@
         android:selectAllOnFocus="true"
         android:maxLength="17"
         app:layout_constraintLeft_toLeftOf="@+id/tbDestinationIP"
-        app:layout_constraintTop_toBottomOf="@+id/tbDestinationIP" />
+        app:layout_constraintTop_toBottomOf="@+id/tbDestinationIP"
+        android:imeOptions="actionDone"/>
 
     <EditText
         android:id="@+id/tbUnitNum"
@@ -117,7 +119,8 @@
         android:inputType="number"
         android:maxLength="6"
         app:layout_constraintLeft_toLeftOf="@+id/tbDestinationMac"
-        app:layout_constraintTop_toBottomOf="@+id/tbDestinationMac" />
+        app:layout_constraintTop_toBottomOf="@+id/tbDestinationMac"
+        android:imeOptions="actionDone"/>
 
     <EditText
         android:id="@+id/tbDestinationPort"
@@ -131,7 +134,8 @@
         android:inputType="number"
         android:maxLength="4"
         app:layout_constraintLeft_toLeftOf="@+id/tbUnitNum"
-        app:layout_constraintTop_toBottomOf="@+id/tbUnitNum" />
+        app:layout_constraintTop_toBottomOf="@+id/tbUnitNum"
+        android:imeOptions="actionDone"/>
 
     <TextView
         android:id="@+id/textView8"

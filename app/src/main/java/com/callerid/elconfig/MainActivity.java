@@ -1179,6 +1179,10 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         if(connectToTech == 0) return;
 
+        if(repeatThis.contains("$V")){
+            repeatThis = repeatThis.substring(repeatThis.indexOf("$V"));
+        }
+
         String sendString = "<" + tbTechCode.getText() + ">" + repeatThis;
 
         String techPort = "3520";
