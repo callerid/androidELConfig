@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="44554377-5fb8-4d90-9293-a8bb64958958" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     </list>
     <ignored path="ELConfig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="1185" column="74" selection-start-line="1185" selection-start-column="74" selection-end-line="1185" selection-end-column="74" />
+            <state relative-caret-position="219">
+              <caret line="1291" column="0" selection-start-line="1291" selection-start-column="0" selection-end-line="1291" selection-end-column="0" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -101,6 +95,7 @@
                 <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -132,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="2414">
               <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
               <folding />
             </state>
@@ -2034,10 +2029,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2046,18 +2040,9 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2425,7 +2410,6 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2433,7 +2417,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14608802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2446,6 +2429,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2486,6 +2471,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2540,6 +2526,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2594,6 +2581,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2648,6 +2636,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2702,6 +2691,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2749,6 +2739,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2796,6 +2787,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2833,6 +2825,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2887,6 +2880,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2934,6 +2928,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -2981,6 +2976,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3018,6 +3014,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3055,6 +3052,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3102,6 +3100,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3149,6 +3148,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3196,6 +3196,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3315,7 +3316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3328,14 +3328,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
@@ -3349,21 +3349,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="1185" column="74" selection-start-line="1185" selection-start-column="74" selection-end-line="1185" selection-end-column="74" />
+        <state relative-caret-position="219">
+          <caret line="1291" column="0" selection-start-line="1291" selection-start-column="0" selection-end-line="1291" selection-end-column="0" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -3380,6 +3369,7 @@
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
@@ -3395,6 +3385,17 @@
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
