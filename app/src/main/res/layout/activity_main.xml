@@ -8,6 +8,27 @@
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true">
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="71dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginStart="62dp"
+        android:text="Dup. Cnt:"
+        app:layout_constraintLeft_toRightOf="@+id/sprLineCount"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdvanced" />
+
+    <Spinner
+        android:id="@+id/sprDupCnt"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdvanced" />
+
     <Button
         android:id="@+id/btnK"
         android:layout_width="40dp"
@@ -249,14 +270,14 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="71dp"
-        android:layout_height="17dp"
-        android:text="Line Count:"
+        android:layout_width="67dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="62dp"
         android:layout_marginStart="62dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnUseSuggested"
+        android:text="Line Cnt:"
         app:layout_constraintLeft_toRightOf="@+id/btnGetToggles"
-        android:layout_marginLeft="55dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUseSuggested" />
 
     <Button
         android:id="@+id/btnClearLog"
@@ -289,12 +310,16 @@
         app:layout_constraintTop_toTopOf="@+id/tbIPAddress" />
 
     <TableLayout
-        android:layout_width="658dp"
-        android:layout_height="67dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnA">
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnC">
 
         <TableRow
             android:layout_width="match_parent"
@@ -344,7 +369,7 @@
         <ScrollView
             android:id="@+id/svCallLog"
             android:layout_width="match_parent"
-            android:layout_height="49dp">
+            android:layout_height="match_parent">
 
             <TableLayout
                 android:id="@+id/tableCallLog"

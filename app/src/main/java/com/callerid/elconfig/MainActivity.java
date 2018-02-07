@@ -48,6 +48,7 @@ import java.io.FileOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
@@ -56,6 +57,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends Activity implements ServiceCallbacks {
 
     private String inString = "Waiting...";
+    private ArrayList<String> previousReceptions;
     public static UDPListen mService;
     private String suggestedIP;
     private String deviceIP;
@@ -74,6 +76,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     // Scroller list
     private String[] lineCountEntries;
     private ArrayAdapter<String> sprLineCntAdapter;
+    private String[] dupCountEntries;
+    private ArrayAdapter<String> sprDupCntAdapter;
 
     private TableLayout tableCallLog;
     private ScrollView svCallLog;
@@ -89,6 +93,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     private Button btnK;
 
     private Spinner sprLnCnt;
+    private Spinner sprDupCnt;
 
     private Button btnGetToggles;
     private Button btnClearCallLog;
@@ -109,6 +114,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
     public static int boxPort;
     int connectToTech = 0;
     boolean lineCntLoaded = false;
+    boolean dupCntLoaded = false;
 
     private void clearCallLog(){
 
@@ -279,6 +285,24 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         // Reception of UDP string
         // Handle all data
+
+        // Code to ignore duplicates
+        if(previousReceptions.contains(inString)) {
+            // If duplicate, ignore
+            return;
+        }
+        else{
+            // If not duplicate add to check buffer
+            if(previousReceptions.size()>30) {
+                // If check buffer is full, add one to the end and remove oldest
+                previousReceptions.add(inString);
+                previousReceptions.remove(0);
+            }
+            else{
+                // If check buffer not full, simply add to end
+                previousReceptions.add(inString);
+            }
+        }
 
         // Setup variables for use
         String myData = inString;
@@ -653,6 +677,18 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             String dest_mac_address = dest_mac_1 + "-" + dest_mac_2 + "-" + dest_mac_3 + "-" + dest_mac_4 + "-" + dest_mac_5 + "-" + dest_mac_6;
             DEST_MAC = dest_mac_address;
 
+            byte[] dup = new byte[]{data[75]};
+            String dupCnt = Integer.toString(Integer.parseInt(bytesToHex(dup),16));
+
+            // Duplicate count
+            int index = sprDupCntAdapter.getPosition(dupCnt);
+            dupCntLoaded=true;
+            if(index==-1){
+                dupCnt = "08";
+                setDupCnt(dupCnt);
+            }
+            sprDupCnt.setSelection(sprDupCntAdapter.getPosition(dupCnt));
+
             techUpdate(unitsDetected, serial_number, unit_number, unit_ip, unit_mac_address, dest_port, dest_ip, dest_mac_address);
 
         }
@@ -702,6 +738,87 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
                 case 33:
                     sendString = "^^Id-N0000007721\r\n";
+                    break;
+            }
+
+            sendUDP(sendString,boxPort,"255.255.255.255");
+            getToggles();
+
+        }catch (Exception e){
+            return;
+        }
+
+    }
+
+    private void setDupCnt(String dupCnt){
+
+        if(!dupCntLoaded)return;
+
+        try{
+
+            int line = Integer.parseInt(dupCnt);
+            String sendString = "";
+            switch (line){
+
+                case 1:
+                    sendString = "^^IdO01";
+                    break;
+                case 2:
+                    sendString = "^^IdO02";
+                    break;
+                case 3:
+                    sendString = "^^IdO03";
+                    break;
+                case 4:
+                    sendString = "^^IdO04";
+                    break;
+                case 5:
+                    sendString = "^^IdO05";
+                    break;
+                case 6:
+                    sendString = "^^IdO06";
+                    break;
+                case 7:
+                    sendString = "^^IdO07";
+                    break;
+                case 8:
+                    sendString = "^^IdO08";
+                    break;
+                case 9:
+                    sendString = "^^IdO09";
+                    break;
+                case 10:
+                    sendString = "^^IdO0A";
+                    break;
+                case 11:
+                    sendString = "^^IdO0B";
+                    break;
+                case 12:
+                    sendString = "^^IdO0C";
+                    break;
+                case 13:
+                    sendString = "^^IdO0D";
+                    break;
+                case 14:
+                    sendString = "^^IdO0E";
+                    break;
+                case 15:
+                    sendString = "^^IdO0F";
+                    break;
+                case 16:
+                    sendString = "^^IdO10";
+                    break;
+                case 17:
+                    sendString = "^^IdO11";
+                    break;
+                case 18:
+                    sendString = "^^IdO12";
+                    break;
+                case 19:
+                    sendString = "^^IdO13";
+                    break;
+                case 20:
+                    sendString = "^^IdO14";
                     break;
             }
 
@@ -838,6 +955,9 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         // Prepare popup messenger
         dlgAlert  = new AlertDialog.Builder(this);
 
+        // Prepare duplicate handler
+        previousReceptions = new ArrayList<>();
+
         // Set screen to stay on
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -857,6 +977,28 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 setLineCount(lineCountEntries[sprLnCnt.getSelectedItemPosition()]);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                getToggles();
+            }
+        });
+
+        // Populate sprDupCnt
+        dupCountEntries = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"};
+        sprDupCnt = (Spinner)findViewById(R.id.sprDupCnt);
+        sprDupCntAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,dupCountEntries);
+        sprDupCnt.setAdapter(sprDupCntAdapter);
+
+        sprDupCnt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                setDupCnt(dupCountEntries[sprDupCnt.getSelectedItemPosition()]);
 
             }
 

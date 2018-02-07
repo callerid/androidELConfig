@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="44554377-5fb8-4d90-9293-a8bb64958958" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     </list>
     <ignored path="ELConfig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,24 +77,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="1291" column="0" selection-start-line="1291" selection-start-column="0" selection-end-line="1291" selection-end-column="0" />
+            <state relative-caret-position="191">
+              <caret line="992" column="47" selection-start-line="992" selection-start-column="47" selection-end-line="992" selection-end-column="47" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-                <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#33582#33640#0" expanded="false" />
+                <element signature="e#38066#38124#0" expanded="false" />
                 <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -101,8 +103,7 @@
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#42222:42699" expanded="false" />
-                <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#46706:47183" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -116,27 +117,37 @@
       </file>
       <file leaf-file-name="activity_advanced.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="2329">
               <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="2414">
-              <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+              <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="UDPListen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -1988,12 +1999,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/Common.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v24/values-v24.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
       </list>
     </option>
@@ -2029,9 +2040,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2040,9 +2048,54 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2050,7 +2103,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="Nexus_6_API_23" />
+    <property name="device.picker.selection" value="540050344404480904cb" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.3.1" />
@@ -2400,7 +2453,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2409,7 +2462,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2446,7 +2499,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="347" />
+      <option name="time" value="357" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2459,15 +2512,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2477,8 +2529,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2497,13 +2548,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2514,15 +2565,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2532,8 +2582,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2552,13 +2601,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2569,15 +2618,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2587,8 +2635,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2607,13 +2654,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2624,15 +2671,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2642,8 +2688,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2662,13 +2707,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2679,15 +2724,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2697,8 +2741,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2710,13 +2753,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2727,15 +2770,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2745,8 +2787,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2758,13 +2799,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2775,15 +2816,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2793,8 +2833,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2813,15 +2852,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2831,8 +2869,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2851,13 +2888,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2023">
           <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2868,15 +2905,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2886,8 +2922,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2899,13 +2934,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -2916,15 +2951,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2934,8 +2968,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -2947,14 +2980,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2964,15 +2997,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -2982,8 +3014,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3002,15 +3033,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -3020,8 +3050,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3040,15 +3069,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -3058,8 +3086,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3071,13 +3098,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -3088,15 +3115,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -3106,8 +3132,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3119,13 +3144,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -3136,15 +3161,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -3154,8 +3178,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3167,13 +3190,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
@@ -3184,15 +3207,14 @@
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -3202,8 +3224,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3215,23 +3236,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -3256,13 +3277,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_advanced.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/app/ActivityThread.java">
@@ -3273,13 +3294,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/Common.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/content/DialogInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -3328,44 +3342,62 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2329">
           <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="1291" column="0" selection-start-line="1291" selection-start-column="0" selection-end-line="1291" selection-end-column="0" />
+        <state relative-caret-position="191">
+          <caret line="992" column="47" selection-start-line="992" selection-start-column="47" selection-end-line="992" selection-end-column="47" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#33582#33640#0" expanded="false" />
+            <element signature="e#38066#38124#0" expanded="false" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
@@ -3375,8 +3407,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#42222:42699" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#46706:47183" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
@@ -3385,17 +3416,6 @@
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
   </component>
