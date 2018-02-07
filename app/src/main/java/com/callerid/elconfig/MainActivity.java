@@ -57,6 +57,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends Activity implements ServiceCallbacks {
 
     private String inString = "Waiting...";
+    private boolean gotToggles = false;
     private ArrayList<String> previousReceptions;
     public static UDPListen mService;
     private String suggestedIP;
@@ -389,6 +390,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
         if(matcherComm.find()){
 
+            gotToggles = true;
+
             // Try to send to CallerID.com tech support
             techRepeat(myData);
             isRawData = false;
@@ -689,7 +692,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             }
             sprDupCnt.setSelection(sprDupCntAdapter.getPosition(dupCnt));
 
-            techUpdate(unitsDetected, serial_number, unit_number, unit_ip, unit_mac_address, dest_port, dest_ip, dest_mac_address);
+            techUpdate(unitsDetected, serial_number, unit_number, unit_ip, unit_mac_address, dest_port, dest_ip, dest_mac_address, dupCnt);
 
         }
 
@@ -1251,12 +1254,19 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         new Thread() {
             @Override
             public void run() {
-                try{
-                    Thread.sleep(500);
-                    sendUDP("^^Id-V",boxPort,"255.255.255.255");
-                }catch (Exception e){
-                    System.out.print("Could not sleep for tech support.");
+
+                gotToggles = false;
+                int tries = 10;
+                while(!gotToggles && tries>0){
+                    try{
+                        Thread.sleep(200);
+                        sendUDP("^^Id-V",boxPort,"255.255.255.255");
+                    }catch (Exception e){
+                        System.out.print("Could not sleep for tech support.");
+                    }
+                    tries--;
                 }
+
             }
         }.start();
 
@@ -1350,7 +1360,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
-    private void techUpdate(int units,String serial,String unitNumber,String unitIP,String unitMAC,String unitPort,String destIP,String destMAC){
+    private void techUpdate(int units,String serial,String unitNumber,String unitIP,String unitMAC,String unitPort,String destIP,String destMAC, String dups){
 
         if(connectToTech == 0) return;
 
@@ -1364,7 +1374,8 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 "<6>" + unitPort + "</6>" +
                 "<7>" + destIP + "</7>" +
                 "<8>" + destMAC + "</8>" +
-                "<9>" + thisIP + "</9>";
+                "<9>" + thisIP + "</9>" +
+                "<12>" + dups + "</12>";
 
         String sendString = "<" + tbTechCode.getText() + ">" + dataString;
 
