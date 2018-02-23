@@ -59,9 +59,6 @@
             <state relative-caret-position="6001">
               <caret line="386" column="44" selection-start-line="386" selection-start-column="44" selection-end-line="386" selection-end-column="44" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#5634#5635#0" expanded="false" />
-                <element signature="e#5683#5684#0" expanded="false" />
                 <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
                 <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
                 <element signature="method#setDisplayTime#0;class#advanced#0" expanded="false" />
@@ -78,8 +75,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="400" column="37" selection-start-line="400" selection-start-column="37" selection-end-line="400" selection-end-column="37" />
+            <state relative-caret-position="206">
+              <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
               <folding>
                 <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -91,7 +88,8 @@
                 <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#38146#38204#0" expanded="false" />
+                <element signature="e#38860#38918#0" expanded="false" />
+                <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -100,7 +98,7 @@
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#47029:47506" expanded="false" />
+                <element signature="class#47743:48220" expanded="false" />
                 <element signature="method#display#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -132,7 +130,7 @@
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="2414">
+            <state relative-caret-position="2771">
               <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
               <folding />
             </state>
@@ -2046,54 +2044,12 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elconfig" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2497,7 +2453,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="360" />
+      <option name="time" value="374" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2517,7 +2473,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2526,7 +2483,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2570,7 +2527,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2579,7 +2537,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2623,7 +2581,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2632,7 +2591,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2676,7 +2635,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2685,7 +2645,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2729,7 +2689,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2738,7 +2699,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2775,7 +2736,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2784,7 +2746,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2821,7 +2783,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2830,7 +2793,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2857,7 +2820,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2866,7 +2830,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2910,7 +2874,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2919,7 +2884,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -2956,7 +2921,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -2965,7 +2931,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3002,7 +2968,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3011,7 +2978,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3038,7 +3005,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3047,7 +3015,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3074,7 +3042,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3083,7 +3052,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3120,7 +3089,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3129,7 +3099,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3166,7 +3136,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3175,7 +3146,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3212,7 +3183,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3221,7 +3193,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
@@ -3304,9 +3276,6 @@
         <state relative-caret-position="6001">
           <caret line="386" column="44" selection-start-line="386" selection-start-column="44" selection-end-line="386" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5634#5635#0" expanded="false" />
-            <element signature="e#5683#5684#0" expanded="false" />
             <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
             <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
             <element signature="method#setDisplayTime#0;class#advanced#0" expanded="false" />
@@ -3361,6 +3330,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2771">
+          <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -3369,21 +3349,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="400" column="37" selection-start-line="400" selection-start-column="37" selection-end-line="400" selection-end-column="37" />
+        <state relative-caret-position="206">
+          <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
           <folding>
             <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
@@ -3395,7 +3364,8 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38146#38204#0" expanded="false" />
+            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
@@ -3404,7 +3374,7 @@
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47029:47506" expanded="false" />
+            <element signature="class#47743:48220" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />

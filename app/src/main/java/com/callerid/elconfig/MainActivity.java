@@ -282,6 +282,25 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
+    private void removeReceptionFromBuffer(String reception){
+
+        ArrayList<Integer> indexes = new ArrayList<>();
+        int cnt = 0;
+
+        for(String pReception : previousReceptions) {
+
+            if(pReception.contains(reception.substring(reception.length()-20))){
+                indexes.add(cnt);
+            }
+            cnt++;
+        }
+
+        for(int i = indexes.size()-1; i >= 0; i--){
+            int remove = indexes.get(i);
+            previousReceptions.remove(remove);
+        }
+    }
+
     public void gotUDP(String inString, byte[] arrayData){
 
         // Reception of UDP string
@@ -349,6 +368,13 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
             // Add call to log
             addCallToLog(myLine,myType,myIndicator,myDuration,myCheckSum,myRings,myDateTime,myNumber,myName);
+
+            // If END RECORD initate removal of old receptions in previousReception buffer
+            if(myIndicator.equals("E")){
+
+                removeReceptionFromBuffer(inString);
+
+            }
 
         }
 
