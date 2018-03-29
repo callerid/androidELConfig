@@ -12,11 +12,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44554377-5fb8-4d90-9293-a8bb64958958" name="Default" comment="">
@@ -52,35 +49,17 @@
     <favorites_list name="ELConfig" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="advanced.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6001">
-              <caret line="386" column="44" selection-start-line="386" selection-start-column="44" selection-end-line="386" selection-end-column="44" />
-              <folding>
-                <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
-                <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
-                <element signature="method#setDisplayTime#0;class#advanced#0" expanded="false" />
-                <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
-                <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
-                <element signature="method#btnBackClicked#0;class#advanced#0" expanded="false" />
-                <element signature="method#updateParameters#0;class#advanced#0" expanded="false" />
-                <element signature="method#savePortChange#0;class#advanced#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
+            <state relative-caret-position="119">
+              <caret line="1298" column="8" selection-start-line="1298" selection-start-column="8" selection-end-line="1298" selection-end-column="60" />
               <folding>
-                <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
+                <element signature="method#previousReceptions_timer_tick#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
@@ -88,61 +67,27 @@
                 <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#38860#38918#0" expanded="false" />
+                <element signature="e#40886#41186#0" expanded="true" />
+                <element signature="e#41007#41160#0" expanded="true" />
+                <element signature="e#41159#41160#0" expanded="true" />
+                <element signature="e#41185#41186#0" expanded="true" />
                 <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#47743:48220" expanded="false" />
+                <element signature="class#49024:49501" expanded="false" />
+                <element signature="method#onServiceConnected#0;class#49024:49501" expanded="false" />
                 <element signature="method#display#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_advanced.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="2329">
-              <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="2771">
-              <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UDPListen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -2036,6 +1981,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2044,12 +1993,50 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elconfig" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2407,7 +2394,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2416,7 +2403,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4032258" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2453,910 +2440,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="374" />
+      <option name="time" value="383" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="339" column="40" selection-start-line="339" selection-start-column="40" selection-end-line="339" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2533">
-          <caret line="149" column="41" selection-start-line="149" selection-start-column="41" selection-end-line="149" selection-end-column="41" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#toggleClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
-            <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
-            <element signature="method#display#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/os/MessageQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/ServiceCallbacks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_advanced.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="2662" column="0" selection-start-line="2662" selection-start-column="0" selection-end-line="2662" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/Common.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/content/DialogInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="111" column="14" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/advanced.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6001">
           <caret line="386" column="44" selection-start-line="386" selection-start-column="44" selection-end-line="386" selection-end-column="44" />
-          <folding>
-            <element signature="method#onDateSet#0;class#advanced#0" expanded="false" />
-            <element signature="method#onTimeSet#0;class#advanced#0" expanded="false" />
-            <element signature="method#setDisplayTime#0;class#advanced#0" expanded="false" />
-            <element signature="method#convertIPToHexString#0;class#advanced#0" expanded="false" />
-            <element signature="method#popupMessage#0;class#advanced#0" expanded="false" />
-            <element signature="method#btnBackClicked#0;class#advanced#0" expanded="false" />
-            <element signature="method#updateParameters#0;class#advanced#0" expanded="false" />
-            <element signature="method#savePortChange#0;class#advanced#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="android-dummy://C:/Users/spenl/Desktop/AndroidStudioProjects/elconfig//Theme Editor">
-      <provider selected="true" editor-type-id="themeEditor">
-        <state theme-name="AppTheme" module-name="app" proportion="0.67" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v24/values-v24.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_advanced.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/UDPListen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="-595">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/callerid/elconfig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="1298" column="8" selection-start-line="1298" selection-start-column="8" selection-end-line="1298" selection-end-column="60" />
           <folding>
-            <element signature="method#clearCallLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addCallToLog#1;class#MainActivity#0" expanded="false" />
+            <element signature="method#previousReceptions_timer_tick#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#gotUDP#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setLineCount#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setDupCnt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addToRawLog#0;class#MainActivity#0" expanded="false" />
@@ -3364,20 +2476,22 @@
             <element signature="method#updateParameters#0;class#MainActivity#0" expanded="false" />
             <element signature="method#flipCase#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendUDP#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#38860#38918#0" expanded="false" />
+            <element signature="e#40886#41186#0" expanded="true" />
+            <element signature="e#41007#41160#0" expanded="true" />
+            <element signature="e#41159#41160#0" expanded="true" />
+            <element signature="e#41185#41186#0" expanded="true" />
             <element signature="method#getToggles#0;class#MainActivity#0" expanded="false" />
             <element signature="method#btnAdvancedClicked#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectingTech#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techRepeat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#techUpdate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#47743:48220" expanded="false" />
+            <element signature="class#49024:49501" expanded="false" />
+            <element signature="method#onServiceConnected#0;class#49024:49501" expanded="false" />
             <element signature="method#display#0;class#MainActivity#0" expanded="false" />
             <element signature="method#bytesToHex#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hexToLongInt#0;class#MainActivity#0" expanded="false" />
             <element signature="method#convertIPToHexString#0;class#MainActivity#0" expanded="false" />
             <element signature="method#popupMessage#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hideKeyboard#0;class#MainActivity#0" expanded="false" />

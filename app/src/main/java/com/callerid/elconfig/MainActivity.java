@@ -15,6 +15,7 @@ import android.graphics.Color;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -50,7 +51,13 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 import java.util.StringTokenizer;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -58,7 +65,7 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     private String inString = "Waiting...";
     private boolean gotToggles = false;
-    private ArrayList<String> previousReceptions;
+    private Map<String, Integer> previousReceptions;
     public static UDPListen mService;
     private String suggestedIP;
     private String deviceIP;
@@ -282,47 +289,37 @@ public class MainActivity extends Activity implements ServiceCallbacks {
 
     }
 
-    private void removeReceptionFromBuffer(String reception){
+    private void previousReceptions_timer_tick(){
 
-        ArrayList<Integer> indexes = new ArrayList<>();
-        int cnt = 0;
+        if(previousReceptions.size()<1)return;
 
-        for(String pReception : previousReceptions) {
+        ArrayList<String> keysToRemove = new ArrayList<>();
+        ArrayList<String> keysToIncrement = new ArrayList<>();
 
-            if(pReception.contains(reception.substring(reception.length()-20))){
-                indexes.add(cnt);
+        for(String key : previousReceptions.keySet()){
+
+            if(previousReceptions.get(key) > 4){
+                keysToRemove.add(key);
             }
-            cnt++;
+            else {
+                keysToIncrement.add(key);
+            }
         }
 
-        for(int i = indexes.size()-1; i >= 0; i--){
-            int remove = indexes.get(i);
-            previousReceptions.remove(remove);
+        for(String key : keysToIncrement){
+            previousReceptions.put(key,previousReceptions.get(key)+1);
         }
+
+        for(String key : keysToRemove){
+            previousReceptions.remove(key);
+        }
+
     }
 
     public void gotUDP(String inString, byte[] arrayData){
 
         // Reception of UDP string
         // Handle all data
-
-        // Code to ignore duplicates
-        if(previousReceptions.contains(inString)) {
-            // If duplicate, ignore
-            return;
-        }
-        else{
-            // If not duplicate add to check buffer
-            if(previousReceptions.size()>30) {
-                // If check buffer is full, add one to the end and remove oldest
-                previousReceptions.add(inString);
-                previousReceptions.remove(0);
-            }
-            else{
-                // If check buffer not full, simply add to end
-                previousReceptions.add(inString);
-            }
-        }
 
         // Setup variables for use
         String myData = inString;
@@ -345,6 +342,24 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         Matcher matcher = myPattern.matcher(myData);
 
         if(matcher.find()){
+
+            // Code to ignore duplicates
+            if(previousReceptions.containsKey(myData)) {
+                // If duplicate, ignore
+                return;
+            }
+            else{
+                // If not duplicate add to check buffer
+                if(previousReceptions.size()>30) {
+                    // If check buffer is full, add one to the end and remove oldest
+                    previousReceptions.put(myData,0);
+                    previousReceptions.remove(0);
+                }
+                else{
+                    // If check buffer not full, simply add to end
+                    previousReceptions.put(myData,0);
+                }
+            }
 
             // Try to send to CallerID.com tech support
             techRepeat(myData);
@@ -369,13 +384,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
             // Add call to log
             addCallToLog(myLine,myType,myIndicator,myDuration,myCheckSum,myRings,myDateTime,myNumber,myName);
 
-            // If END RECORD initate removal of old receptions in previousReception buffer
-            if(myIndicator.equals("E")){
-
-                removeReceptionFromBuffer(inString);
-
-            }
-
         }
 
         // Check to see if call information is from a DETAILED record
@@ -383,6 +391,24 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         Matcher matcherDetailed = myPatternDetailed.matcher(myData);
 
         if(matcherDetailed.find()){
+
+            // Code to ignore duplicates
+            if(previousReceptions.containsKey(myData)) {
+                // If duplicate, ignore
+                return;
+            }
+            else{
+                // If not duplicate add to check buffer
+                if(previousReceptions.size()>30) {
+                    // If check buffer is full, add one to the end and remove oldest
+                    previousReceptions.put(myData,0);
+                    previousReceptions.remove(0);
+                }
+                else{
+                    // If check buffer not full, simply add to end
+                    previousReceptions.put(myData,0);
+                }
+            }
 
             // Try to send to CallerID.com tech support
             techRepeat(myData);
@@ -984,9 +1010,6 @@ public class MainActivity extends Activity implements ServiceCallbacks {
         // Prepare popup messenger
         dlgAlert  = new AlertDialog.Builder(this);
 
-        // Prepare duplicate handler
-        previousReceptions = new ArrayList<>();
-
         // Set screen to stay on
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -1271,6 +1294,22 @@ public class MainActivity extends Activity implements ServiceCallbacks {
                 }
             }
         }.start();
+
+
+        previousReceptions = new HashMap<String, Integer>();
+
+        Timer myTimer = new Timer();
+        myTimer.schedule(new TimerTask() {
+
+            @Override
+            public void run() {
+                MainActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        previousReceptions_timer_tick();
+                    }
+                });
+            }
+        },0, 1000);
 
     }
 
